@@ -939,7 +939,7 @@ input, select, textarea, button {
         <em>Pizza</em>
         DO CARIRI
       </h1>
-      <p class="hero-desc">Ingredientes frescos, receitas tradicionais e o sabor inconfundível de quem faz com amor. Delivery rápido para sua porta.</p>
+      <p class="hero-desc">Ingredientes frescos, receitas tradicionais e o sabor inconfundível de quem faz com amor. Peça pelo WhatsApp e combine a entrega!</p>
       <div class="hero-actions">
         <a href="#cardapio" class="btn-primary">
           Ver Cardápio <i class="fa-solid fa-arrow-right"></i>
@@ -1253,7 +1253,7 @@ input, select, textarea, button {
       <div>
         <div class="promo-tag">⚡ Promoção da Noite</div>
         <h2>PIZZA GRANDE<br>+ REFRI 2L</h2>
-        <p>Válido de segunda a quinta. Qualquer sabor do cardápio.<br>Entrega grátis no centro de Sumé!</p>
+        <p>Válido de segunda a quinta. Qualquer sabor do cardápio.<br>Frete a combinar com a pizzaria!</p>
       </div>
       <div class="promo-price-box">
         <div class="promo-from">de R$ 71,90</div>
@@ -1306,8 +1306,8 @@ input, select, textarea, button {
           <div class="feature-item">
             <div class="feature-icon"><i class="fa-solid fa-truck-fast"></i></div>
             <div class="feature-text">
-              <strong>Delivery Rápido</strong>
-              <p>Entregamos em até 40 minutos em toda Sumé e região.</p>
+              <strong>Delivery Disponível</strong>
+              <p>Atendemos pedidos para entrega em Sumé e região. Frete a combinar direto pelo WhatsApp.</p>
             </div>
           </div>
           <div class="feature-item">
@@ -1406,8 +1406,8 @@ input, select, textarea, button {
     </div>
     <div class="info-item">
       <i class="fa-solid fa-motorcycle"></i>
-      <strong>Entrega em 50min</strong>
-      <span>Frete grátis para toda cidade!</span>
+      <strong>Delivery Disponível</strong>
+      <span>Frete a combinar com a pizzaria</span>
     </div>
   </div>
 </div>
@@ -1593,7 +1593,7 @@ function renderCartTab(){
         <div class="payment-body">
           <div class="order-summary">
             <div class="summary-row"><span>Subtotal</span><span>R$ ${total.toFixed(2).replace('.',',')}</span></div>
-            <div class="summary-row"><span>Entrega</span><span style="color:var(--green);font-weight:700;">Grátis</span></div>
+            <div class="summary-row"><span>Entrega</span><span style="color:var(--warm-gray);font-style:italic;">A combinar</span></div>
             <div class="summary-row total">
               <span>Total</span>
               <span class="val">R$ ${totalFinal.toFixed(2).replace('.',',')}</span>
@@ -1724,7 +1724,7 @@ function enviarWhatsApp(){
     msg += `• ${i.qty}x ${i.name} — R$ ${(i.price*i.qty).toFixed(2).replace('.',',')}\n`;
   });
   msg += `\n*Total:* R$ ${total.toFixed(2).replace('.',',')}`;
-  msg += `\n*Entrega:* Grátis`;
+  msg += `\n*Entrega:* A combinar com a pizzaria`;
   msg += `\n*Pagamento:* ${payLabels[selectedPayment]}`;
   if(selectedPayment === 'dinheiro'){
     if(trocoValor === 'nao') msg += `\n*Troco:* Não precisa`;
