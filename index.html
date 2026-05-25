@@ -501,6 +501,39 @@ header{
 }
 .addr-required{color:var(--red);}
 
+/* ─── TROCO ─── */
+.troco-block{
+  background:rgba(255,248,235,.8);
+  border:1.5px solid rgba(212,168,68,.35);
+  border-radius:10px;padding:14px 16px;
+  margin-top:10px;margin-bottom:4px;
+  animation:fadeSlide .2s ease;
+}
+@keyframes fadeSlide{from{opacity:0;transform:translateY(-6px);}to{opacity:1;transform:translateY(0);}}
+.troco-label-top{
+  font-size:.67rem;font-weight:700;letter-spacing:1.5px;
+  text-transform:uppercase;color:#8a6d00;margin-bottom:10px;display:flex;align-items:center;gap:6px;
+}
+.troco-options{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;}
+.troco-chip{
+  padding:7px 14px;border-radius:20px;border:1.5px solid rgba(212,168,68,.4);
+  background:white;color:var(--charcoal);font-size:.8rem;font-weight:700;
+  cursor:pointer;transition:.2s;
+}
+.troco-chip:hover{border-color:var(--gold);background:rgba(212,168,68,.1);}
+.troco-chip.active{background:var(--gold);border-color:var(--gold);color:var(--charcoal);}
+.troco-input-wrap{display:flex;align-items:center;gap:8px;}
+.troco-prefix{font-size:.9rem;font-weight:700;color:var(--charcoal);}
+.troco-input{
+  flex:1;padding:9px 12px;border-radius:6px;
+  border:1.5px solid rgba(212,168,68,.4);background:white;
+  font-family:'DM Sans',sans-serif;font-size:16px;font-weight:700;
+  outline:none;transition:.2s;color:var(--charcoal);
+  -webkit-appearance:none;
+}
+.troco-input:focus{border-color:var(--gold);}
+.troco-input::placeholder{color:#ccc;font-weight:400;}
+
 /* ─── PIX MODAL ─── */
 .pix-modal-overlay{
   position:fixed;inset:0;background:rgba(0,0,0,.6);
@@ -783,6 +816,13 @@ footer{
 }
 
 /* ─── RESPONSIVE ─── */
+
+/* Força font-size 16px em TODOS os inputs/selects/textareas — previne zoom iOS */
+input, select, textarea, button {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
 @media(max-width:1100px){
   .hero-content{grid-template-columns:1fr;padding:140px 30px 60px;}
   .hero-right{display:none;}
@@ -800,6 +840,7 @@ footer{
   .cart-layout{grid-template-columns:1fr;}
   .payment-col{position:static;}
 }
+
 @media(max-width:768px){
   .nav-links{display:none;}
   .hero h1{font-size:4.2rem;}
@@ -812,6 +853,45 @@ footer{
   .container{padding:0 18px;}
   .tabs{flex-wrap:wrap;}
   .pay-methods{grid-template-columns:1fr 1fr;}
+  .menu-section{padding:70px 0;}
+  .why-section{padding:70px 0;}
+  .gallery-section{padding:70px 0;}
+  .reviews-section{padding:60px 0;}
+  .promo-section{padding:0 0 70px;}
+  .promo-banner{padding:40px 24px;}
+  .promo-banner h2{font-size:2.6rem;}
+  .promo-to{font-size:3.6rem;}
+  .section-header h2{font-size:3rem;}
+  .why-content h2{font-size:2.8rem;}
+  .gallery-header h2{font-size:3rem;}
+  .reviews-header h2{font-size:2.8rem;}
+  .hero-actions{flex-direction:column;}
+  .btn-primary,.btn-green,.btn-ghost{width:100%;justify-content:center;}
+  .tabs{width:100%;}
+  .tab-btn{flex:1;justify-content:center;padding:10px 8px;font-size:.7rem;}
+  .items-grid{grid-template-columns:1fr;}
+  .drinks-grid{grid-template-columns:1fr 1fr;}
+  .cart-item{flex-wrap:wrap;gap:12px;}
+  .cart-item-price{width:100%;text-align:left;font-size:1.4rem;}
+  .addr-grid{grid-template-columns:1fr 90px;}
+  .pay-methods{grid-template-columns:1fr 1fr;gap:8px;}
+  .pix-modal{margin:0 12px;}
+  .footer-grid{gap:28px;}
+  .info-grid{padding:0 18px;}
+  .info-bar{padding:36px 0;}
+  #tab-carrinho{padding:16px;}
+}
+
+@media(max-width:390px){
+  .hero h1{font-size:3.4rem;}
+  .hero h1 em{font-size:2.8rem;}
+  .logo{font-size:1.5rem;}
+  .tabs{gap:2px;}
+  .tab-btn{padding:9px 6px;font-size:.65rem;letter-spacing:.5px;}
+  .drinks-grid{grid-template-columns:1fr;}
+  .section-header h2{font-size:2.4rem;}
+  .promo-banner h2{font-size:2rem;}
+  .addr-grid{grid-template-columns:1fr;}
 }
 </style>
 </head>
@@ -1383,6 +1463,8 @@ let cart = [];
 let selectedPayment = '';
 let deliveryAddress = { rua: '', numero: '', bairro: '', ref: '' };
 let savedObsGlobal = '';
+let trocoValor = '';
+let trocoCustom = '';
 
 function addToCart(name, img, price){
   const existing = cart.find(i => i.name === name);
@@ -1554,8 +1636,27 @@ function renderCartTab(){
           <span class="pay-label">Forma de pagamento</span>
           <div class="pay-methods">${payHTML}</div>
 
-          <span class="obs-label">Observações (opcional)</span>
-          <textarea id="obs-input" class="obs-input" rows="2" placeholder="Ex: sem cebola, troco para R$100..." oninput="savedObsGlobal=this.value">${savedObs}</textarea>
+          ${selectedPayment === 'dinheiro' ? `
+          <div class="troco-block">
+            <div class="troco-label-top"><i class="fa-solid fa-coins"></i> Precisa de troco?</div>
+            <div class="troco-options">
+              <div class="troco-chip ${trocoValor==='nao'?'active':''}" onclick="setTroco('nao')">Não preciso</div>
+              <div class="troco-chip ${trocoValor==='50'?'active':''}" onclick="setTroco('50')">R$ 50</div>
+              <div class="troco-chip ${trocoValor==='100'?'active':''}" onclick="setTroco('100')">R$ 100</div>
+              <div class="troco-chip ${trocoValor==='outro'?'active':''}" onclick="setTroco('outro')">Outro</div>
+            </div>
+            ${trocoValor === 'outro' ? `
+            <div class="troco-input-wrap">
+              <span class="troco-prefix">R$</span>
+              <input class="troco-input" type="number" inputmode="numeric" id="troco-custom"
+                placeholder="Valor que vai pagar"
+                value="${trocoCustom}"
+                oninput="trocoCustom=this.value">
+            </div>` : ''}
+          </div>` : ''}
+
+          <span class="obs-label" style="margin-top:14px;">Observações (opcional)</span>
+          <textarea id="obs-input" class="obs-input" rows="2" placeholder="Ex: sem cebola..." oninput="savedObsGlobal=this.value">${savedObs}</textarea>
 
           <button class="btn-confirm" id="btn-confirm-pedido" ${confirmDisabled} onclick="confirmarPedido()">
             <i class="fa-brands fa-whatsapp" style="font-size:1.2rem;"></i>
@@ -1568,9 +1669,15 @@ function renderCartTab(){
   `;
 }
 
+function setTroco(val){
+  trocoValor = val;
+  if(val !== 'outro') trocoCustom = '';
+  renderCartTab();
+}
+
 function selectPayment(id){
   selectedPayment = id;
-  // salva obs antes de re-renderizar
+  if(id !== 'dinheiro'){ trocoValor = ''; trocoCustom = ''; }
   const obsEl = document.getElementById('obs-input');
   if(obsEl) savedObsGlobal = obsEl.value;
   renderCartTab();
@@ -1619,6 +1726,12 @@ function enviarWhatsApp(){
   msg += `\n*Total:* R$ ${total.toFixed(2).replace('.',',')}`;
   msg += `\n*Entrega:* Grátis`;
   msg += `\n*Pagamento:* ${payLabels[selectedPayment]}`;
+  if(selectedPayment === 'dinheiro'){
+    if(trocoValor === 'nao') msg += `\n*Troco:* Não precisa`;
+    else if(trocoValor === '50') msg += `\n*Troco:* Para R$ 50,00`;
+    else if(trocoValor === '100') msg += `\n*Troco:* Para R$ 100,00`;
+    else if(trocoValor === 'outro' && trocoCustom) msg += `\n*Troco:* Para R$ ${parseFloat(trocoCustom).toFixed(2).replace('.',',')}`;
+  }
   msg += `\n*Endereço:* ${enderecoFmt}`;
   if(obs.trim()) msg += `\n*Obs:* ${obs.trim()}`;
 
