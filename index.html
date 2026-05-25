@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>Pizzaria do Gordo — Sumé</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -451,7 +451,7 @@ header{
 .obs-input{
   width:100%;padding:10px 14px;border-radius:6px;
   border:1.5px solid var(--border-light);background:white;
-  font-family:'DM Sans',sans-serif;font-size:.88rem;
+  font-family:'DM Sans',sans-serif;font-size:16px;
   resize:none;transition:.2s;margin-bottom:18px;
   outline:none;
 }
@@ -471,6 +471,111 @@ header{
   text-align:center;font-size:.75rem;color:var(--warm-gray);
   margin-top:10px;line-height:1.5;
 }
+
+/* ─── ENDEREÇO ─── */
+.address-block{
+  background:rgba(26,122,46,.05);
+  border:1.5px solid rgba(26,122,46,.2);
+  border-radius:10px;padding:18px;margin-bottom:20px;
+}
+.address-block-header{
+  display:flex;align-items:center;gap:8px;
+  font-size:.7rem;font-weight:700;letter-spacing:2px;
+  text-transform:uppercase;color:var(--green);margin-bottom:14px;
+}
+.address-block-header i{font-size:1rem;}
+.addr-grid{display:grid;grid-template-columns:1fr 80px;gap:8px;margin-bottom:8px;}
+.addr-full{grid-column:1/-1;}
+.addr-input{
+  width:100%;padding:10px 12px;border-radius:6px;
+  border:1.5px solid var(--border-light);background:white;
+  font-family:'DM Sans',sans-serif;font-size:16px;
+  outline:none;transition:.2s;color:var(--charcoal);
+}
+.addr-input:focus{border-color:var(--green);}
+.addr-input::placeholder{color:#bbb;}
+.addr-label{
+  font-size:.67rem;font-weight:600;letter-spacing:1px;
+  text-transform:uppercase;color:var(--warm-gray);
+  display:block;margin-bottom:4px;
+}
+.addr-required{color:var(--red);}
+
+/* ─── PIX MODAL ─── */
+.pix-modal-overlay{
+  position:fixed;inset:0;background:rgba(0,0,0,.6);
+  z-index:9990;display:flex;align-items:center;justify-content:center;
+  padding:20px;backdrop-filter:blur(4px);
+  opacity:0;pointer-events:none;transition:.25s;
+}
+.pix-modal-overlay.open{opacity:1;pointer-events:all;}
+.pix-modal{
+  background:var(--white);border-radius:16px;
+  max-width:360px;width:100%;
+  box-shadow:0 24px 60px rgba(0,0,0,.3);
+  overflow:hidden;
+  transform:translateY(20px);transition:.25s;
+}
+.pix-modal-overlay.open .pix-modal{transform:translateY(0);}
+.pix-modal-header{
+  background:linear-gradient(135deg,var(--green-dark),var(--green));
+  padding:20px 24px;display:flex;align-items:center;justify-content:space-between;
+}
+.pix-modal-header h3{
+  font-family:'Bebas Neue',sans-serif;font-size:1.6rem;
+  letter-spacing:2px;color:white;display:flex;align-items:center;gap:10px;
+}
+.pix-modal-close{
+  background:rgba(255,255,255,.2);border:none;color:white;
+  width:32px;height:32px;border-radius:50%;cursor:pointer;
+  font-size:1rem;display:flex;align-items:center;justify-content:center;
+  transition:.2s;
+}
+.pix-modal-close:hover{background:rgba(255,255,255,.35);}
+.pix-modal-body{padding:24px;}
+.pix-qr-wrap{
+  background:var(--cream);border:2px dashed var(--border-light);
+  border-radius:12px;padding:20px;text-align:center;margin-bottom:20px;
+}
+.pix-qr-wrap canvas,
+.pix-qr-img{
+  width:180px;height:180px;margin:0 auto 10px;display:block;
+  border-radius:8px;
+}
+.pix-qr-label{font-size:.72rem;color:var(--warm-gray);letter-spacing:1px;text-transform:uppercase;}
+.pix-key-wrap{
+  background:rgba(26,122,46,.06);border:1.5px solid rgba(26,122,46,.25);
+  border-radius:10px;padding:14px 16px;margin-bottom:16px;
+}
+.pix-key-label{font-size:.65rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--green);margin-bottom:6px;}
+.pix-key-row{display:flex;align-items:center;gap:10px;}
+.pix-key-value{
+  flex:1;font-size:1.05rem;font-weight:700;color:var(--charcoal);
+  font-family:'DM Sans',sans-serif;letter-spacing:.5px;
+}
+.pix-copy-btn{
+  background:var(--green);color:white;border:none;
+  padding:8px 14px;border-radius:6px;cursor:pointer;
+  font-size:.75rem;font-weight:700;letter-spacing:1px;
+  text-transform:uppercase;transition:.2s;white-space:nowrap;
+  display:flex;align-items:center;gap:6px;
+}
+.pix-copy-btn:hover{background:var(--green-dark);}
+.pix-copy-btn.copied{background:#059669;}
+.pix-note{
+  font-size:.8rem;color:var(--warm-gray);line-height:1.6;
+  text-align:center;padding:0 4px;
+}
+.pix-note strong{color:var(--charcoal);}
+.pix-after-btn{
+  width:100%;margin-top:16px;
+  background:var(--green);color:white;border:none;
+  padding:14px;border-radius:8px;cursor:pointer;
+  font-family:'DM Sans',sans-serif;font-size:.85rem;font-weight:700;
+  letter-spacing:1px;text-transform:uppercase;transition:.2s;
+  display:flex;align-items:center;justify-content:center;gap:8px;
+}
+.pix-after-btn:hover{background:var(--green-dark);}
 
 /* ─── PROMO ─── */
 .promo-section{padding:0 0 100px;background:var(--cream);}
@@ -1276,6 +1381,8 @@ footer{
 // ─── CARRINHO STATE ───
 let cart = [];
 let selectedPayment = '';
+let deliveryAddress = { rua: '', numero: '', bairro: '', ref: '' };
+let savedObsGlobal = '';
 
 function addToCart(name, img, price){
   const existing = cart.find(i => i.name === name);
@@ -1354,6 +1461,7 @@ function renderCartTab(){
     </div>
   `).join('');
 
+  const savedObs = document.getElementById('obs-input')?.value ?? savedObsGlobal;
   const total = getTotal();
   const frete = 0;
   const totalFinal = total + frete;
@@ -1373,8 +1481,12 @@ function renderCartTab(){
     </div>
   `).join('');
 
-  const confirmDisabled = !selectedPayment ? 'disabled' : '';
-  const confirmHint = !selectedPayment ? 'Escolha a forma de pagamento acima' : 'Pedido será enviado via WhatsApp';
+  const confirmDisabled = (!selectedPayment || !deliveryAddress.rua || !deliveryAddress.numero || !deliveryAddress.bairro) ? 'disabled' : '';
+  const confirmHint = !selectedPayment
+    ? 'Escolha a forma de pagamento acima'
+    : (!deliveryAddress.rua || !deliveryAddress.numero || !deliveryAddress.bairro)
+      ? 'Preencha o endereço de entrega'
+      : 'Pedido será enviado via WhatsApp';
 
   el.innerHTML = `
     <div class="cart-layout">
@@ -1406,17 +1518,50 @@ function renderCartTab(){
             </div>
           </div>
 
+          <!-- ENDEREÇO -->
+          <div class="address-block">
+            <div class="address-block-header">
+              <i class="fa-solid fa-location-dot"></i> Endereço de entrega
+            </div>
+            <div class="addr-grid">
+              <div>
+                <label class="addr-label">Rua / Av. <span class="addr-required">*</span></label>
+                <input class="addr-input" type="text" id="addr-rua" placeholder="Ex: Rua das Flores"
+                  value="${deliveryAddress.rua}"
+                  oninput="deliveryAddress.rua=this.value;syncConfirm()">
+              </div>
+              <div>
+                <label class="addr-label">Número <span class="addr-required">*</span></label>
+                <input class="addr-input" type="text" id="addr-num" placeholder="Ex: 42"
+                  value="${deliveryAddress.numero}"
+                  oninput="deliveryAddress.numero=this.value;syncConfirm()">
+              </div>
+            </div>
+            <div style="margin-bottom:8px;">
+              <label class="addr-label">Bairro <span class="addr-required">*</span></label>
+              <input class="addr-input" type="text" id="addr-bairro" placeholder="Ex: Centro"
+                value="${deliveryAddress.bairro}"
+                oninput="deliveryAddress.bairro=this.value;syncConfirm()">
+            </div>
+            <div>
+              <label class="addr-label">Ponto de referência</label>
+              <input class="addr-input" type="text" id="addr-ref" placeholder="Ex: próximo ao mercado"
+                value="${deliveryAddress.ref}"
+                oninput="deliveryAddress.ref=this.value">
+            </div>
+          </div>
+
           <span class="pay-label">Forma de pagamento</span>
           <div class="pay-methods">${payHTML}</div>
 
           <span class="obs-label">Observações (opcional)</span>
-          <textarea id="obs-input" class="obs-input" rows="3" placeholder="Ex: sem cebola, troco para R$100..."></textarea>
+          <textarea id="obs-input" class="obs-input" rows="2" placeholder="Ex: sem cebola, troco para R$100..." oninput="savedObsGlobal=this.value">${savedObs}</textarea>
 
-          <button class="btn-confirm" ${confirmDisabled} onclick="confirmarPedido()">
+          <button class="btn-confirm" id="btn-confirm-pedido" ${confirmDisabled} onclick="confirmarPedido()">
             <i class="fa-brands fa-whatsapp" style="font-size:1.2rem;"></i>
             Confirmar Pedido
           </button>
-          <p class="pay-note"><i class="fa-solid fa-circle-info"></i> ${confirmHint}</p>
+          <p class="pay-note" id="confirm-hint"><i class="fa-solid fa-circle-info"></i> ${confirmHint}</p>
         </div>
       </div>
     </div>
@@ -1425,14 +1570,46 @@ function renderCartTab(){
 
 function selectPayment(id){
   selectedPayment = id;
+  // salva obs antes de re-renderizar
+  const obsEl = document.getElementById('obs-input');
+  if(obsEl) savedObsGlobal = obsEl.value;
   renderCartTab();
+}
+
+function syncConfirm(){
+  const btn = document.getElementById('btn-confirm-pedido');
+  const hint = document.getElementById('confirm-hint');
+  if(!btn) return;
+  const ok = selectedPayment && deliveryAddress.rua && deliveryAddress.numero && deliveryAddress.bairro;
+  btn.disabled = !ok;
+  if(hint){
+    if(!selectedPayment) hint.innerHTML = '<i class="fa-solid fa-circle-info"></i> Escolha a forma de pagamento acima';
+    else if(!deliveryAddress.rua || !deliveryAddress.numero || !deliveryAddress.bairro)
+      hint.innerHTML = '<i class="fa-solid fa-circle-info"></i> Preencha o endereço de entrega';
+    else hint.innerHTML = '<i class="fa-solid fa-circle-info"></i> Pedido será enviado via WhatsApp';
+  }
 }
 
 function confirmarPedido(){
   if(!selectedPayment || cart.length===0) return;
-  const obs = document.getElementById('obs-input')?.value || '';
+  if(!deliveryAddress.rua || !deliveryAddress.numero || !deliveryAddress.bairro) return;
+
+  // Pix → abre modal primeiro
+  if(selectedPayment === 'pix'){
+    openPixModal();
+    return;
+  }
+  enviarWhatsApp();
+}
+
+function enviarWhatsApp(){
+  if(!selectedPayment || cart.length===0) return;
+  const obs = document.getElementById('obs-input')?.value ?? savedObsGlobal;
   const payLabels = {dinheiro:'Dinheiro',pix:'Pix',debito:'Cartão Débito',credito:'Cartão Crédito'};
   const total = getTotal();
+
+  let enderecoFmt = `${deliveryAddress.rua}, ${deliveryAddress.numero} — ${deliveryAddress.bairro}, Sumé - PB`;
+  if(deliveryAddress.ref.trim()) enderecoFmt += ` (Ref: ${deliveryAddress.ref.trim()})`;
 
   let msg = '🍕 *NOVO PEDIDO — Pizzaria do Gordo*\n\n';
   msg += '*Itens:*\n';
@@ -1442,6 +1619,7 @@ function confirmarPedido(){
   msg += `\n*Total:* R$ ${total.toFixed(2).replace('.',',')}`;
   msg += `\n*Entrega:* Grátis`;
   msg += `\n*Pagamento:* ${payLabels[selectedPayment]}`;
+  msg += `\n*Endereço:* ${enderecoFmt}`;
   if(obs.trim()) msg += `\n*Obs:* ${obs.trim()}`;
 
   const url = `https://wa.me/5583996384531?text=${encodeURIComponent(msg)}`;
@@ -1496,6 +1674,145 @@ document.querySelectorAll('.item-card,.drink-card,.feature-item,.review-card').f
   el.style.transition='opacity .55s ease, transform .55s ease';
   observer.observe(el);
 });
+
+// ─── PIX MODAL ───
+const PIX_CHAVE = '83996384531';
+
+function openPixModal(){
+  document.getElementById('pix-modal-overlay').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closePixModal(){
+  document.getElementById('pix-modal-overlay').classList.remove('open');
+  document.body.style.overflow='';
+}
+
+function copyPixKey(){
+  navigator.clipboard.writeText(PIX_CHAVE).then(()=>{
+    const btn = document.getElementById('pix-copy-btn');
+    btn.classList.add('copied');
+    btn.innerHTML = '<i class="fa-solid fa-check"></i> Copiado!';
+    setTimeout(()=>{
+      btn.classList.remove('copied');
+      btn.innerHTML = '<i class="fa-regular fa-copy"></i> Copiar';
+    }, 2500);
+  }).catch(()=>{
+    // fallback para Safari antigo
+    const ta = document.createElement('textarea');
+    ta.value = PIX_CHAVE;
+    ta.style.position='fixed';ta.style.opacity='0';
+    document.body.appendChild(ta);
+    ta.focus();ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    const btn = document.getElementById('pix-copy-btn');
+    btn.classList.add('copied');
+    btn.innerHTML = '<i class="fa-solid fa-check"></i> Copiado!';
+    setTimeout(()=>{
+      btn.classList.remove('copied');
+      btn.innerHTML = '<i class="fa-regular fa-copy"></i> Copiar';
+    }, 2500);
+  });
+}
+
+// Fechar modal clicando fora
+document.getElementById('pix-modal-overlay').addEventListener('click', function(e){
+  if(e.target === this) closePixModal();
+});
 </script>
+
+<!-- PIX MODAL -->
+<div class="pix-modal-overlay" id="pix-modal-overlay">
+  <div class="pix-modal">
+    <div class="pix-modal-header">
+      <h3><i class="fa-brands fa-pix"></i> Pagar com Pix</h3>
+      <button class="pix-modal-close" onclick="closePixModal()"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="pix-modal-body">
+
+      <div class="pix-qr-wrap">
+        <!-- QR Code fictício — substitua pela imagem real gerada pelo seu banco -->
+        <svg class="pix-qr-img" viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg" style="background:white;padding:8px;border-radius:8px;">
+          <!-- Canto TL -->
+          <rect x="10" y="10" width="50" height="50" rx="4" fill="none" stroke="#111" stroke-width="5"/>
+          <rect x="20" y="20" width="30" height="30" rx="2" fill="#111"/>
+          <!-- Canto TR -->
+          <rect x="120" y="10" width="50" height="50" rx="4" fill="none" stroke="#111" stroke-width="5"/>
+          <rect x="130" y="20" width="30" height="30" rx="2" fill="#111"/>
+          <!-- Canto BL -->
+          <rect x="10" y="120" width="50" height="50" rx="4" fill="none" stroke="#111" stroke-width="5"/>
+          <rect x="20" y="130" width="30" height="30" rx="2" fill="#111"/>
+          <!-- Módulos centrais fictícios -->
+          <rect x="75" y="10" width="8" height="8" fill="#111"/>
+          <rect x="87" y="10" width="8" height="8" fill="#111"/>
+          <rect x="75" y="22" width="8" height="8" fill="#111"/>
+          <rect x="99" y="22" width="8" height="8" fill="#111"/>
+          <rect x="75" y="34" width="20" height="8" fill="#111"/>
+          <rect x="75" y="46" width="8" height="8" fill="#111"/>
+          <rect x="87" y="46" width="8" height="8" fill="#111"/>
+          <rect x="99" y="10" width="8" height="8" fill="#111"/>
+          <!-- Centro -->
+          <rect x="75" y="75" width="30" height="8" fill="#111"/>
+          <rect x="75" y="87" width="8" height="8" fill="#111"/>
+          <rect x="97" y="87" width="8" height="8" fill="#111"/>
+          <rect x="75" y="99" width="8" height="8" fill="#111"/>
+          <rect x="87" y="99" width="8" height="8" fill="#111"/>
+          <rect x="99" y="75" width="8" height="30" fill="#111"/>
+          <!-- Bottom right módulos -->
+          <rect x="120" y="75" width="8" height="8" fill="#111"/>
+          <rect x="132" y="75" width="8" height="8" fill="#111"/>
+          <rect x="144" y="75" width="8" height="8" fill="#111"/>
+          <rect x="156" y="75" width="8" height="8" fill="#111"/>
+          <rect x="120" y="87" width="8" height="8" fill="#111"/>
+          <rect x="144" y="87" width="20" height="8" fill="#111"/>
+          <rect x="120" y="99" width="20" height="8" fill="#111"/>
+          <rect x="144" y="99" width="8" height="8" fill="#111"/>
+          <rect x="120" y="111" width="8" height="8" fill="#111"/>
+          <rect x="132" y="111" width="8" height="8" fill="#111"/>
+          <rect x="156" y="111" width="8" height="8" fill="#111"/>
+          <!-- extra bottom -->
+          <rect x="10" y="75" width="8" height="8" fill="#111"/>
+          <rect x="22" y="75" width="8" height="8" fill="#111"/>
+          <rect x="34" y="75" width="8" height="8" fill="#111"/>
+          <rect x="46" y="75" width="8" height="8" fill="#111"/>
+          <rect x="58" y="75" width="8" height="8" fill="#111"/>
+          <rect x="10" y="87" width="20" height="8" fill="#111"/>
+          <rect x="46" y="87" width="8" height="8" fill="#111"/>
+          <rect x="10" y="99" width="8" height="8" fill="#111"/>
+          <rect x="34" y="99" width="20" height="8" fill="#111"/>
+          <rect x="58" y="99" width="8" height="8" fill="#111"/>
+          <rect x="10" y="111" width="8" height="8" fill="#111"/>
+          <rect x="22" y="111" width="8" height="8" fill="#111"/>
+          <rect x="46" y="111" width="8" height="8" fill="#111"/>
+          <rect x="58" y="111" width="8" height="8" fill="#111"/>
+          <!-- Logo Pix no centro -->
+          <rect x="82" y="82" width="16" height="16" rx="3" fill="white" stroke="#1A7A2E" stroke-width="2"/>
+          <text x="90" y="93" font-size="8" text-anchor="middle" fill="#1A7A2E" font-weight="bold">₱</text>
+        </svg>
+        <div class="pix-qr-label">⚠️ QR Code fictício — substitua pela imagem real do seu banco</div>
+      </div>
+
+      <div class="pix-key-wrap">
+        <div class="pix-key-label">Chave Pix (Telefone)</div>
+        <div class="pix-key-row">
+          <span class="pix-key-value">(83) 99638-4531</span>
+          <button class="pix-copy-btn" id="pix-copy-btn" onclick="copyPixKey()">
+            <i class="fa-regular fa-copy"></i> Copiar
+          </button>
+        </div>
+      </div>
+
+      <p class="pix-note">
+        Após o pagamento, envie o <strong>comprovante pelo WhatsApp</strong> para confirmar seu pedido.
+      </p>
+
+      <button class="pix-after-btn" onclick="closePixModal();enviarWhatsApp();">
+        <i class="fa-brands fa-whatsapp"></i> Já paguei — Enviar pedido
+      </button>
+
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
