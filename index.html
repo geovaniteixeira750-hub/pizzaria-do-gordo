@@ -2,1930 +2,477 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>Pizzaria do Gordo — Sumé</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pizzaria do Gordo - Sumé, PB</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <style>
-:root{
-  --red:#CC1F1F;
-  --red-dark:#9B0F0F;
-  --red-light:#E84040;
-  --green:#1A7A2E;
-  --green-light:#22A83E;
-  --green-dark:#0F5520;
-  --white:#FFFFFF;
-  --cream:#F9F5F0;
-  --charcoal:#1A1A1A;
-  --dark:#0F0F0F;
-  --mid:#2A2A2A;
-  --warm-gray:#888888;
-  --border:#2E2E2E;
-  --border-light:#E0E0E0;
-  --gold:#D4A844;
-}
-*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth;}
-body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--charcoal);overflow-x:hidden;}
-img{width:100%;display:block;}
-a{text-decoration:none;color:inherit;}
+:root{--red:#c0181a;--red-dk:#8b0f11;--green:#1b6b2e;--green-dk:#0f4a1e;--gold:#d4a017;--gold-lt:#f0c040;--cream:#fbf6ee;--cream-dk:#f0e8d8;--white:#fff;--charcoal:#1c1c1c;--dark:#111;--gray:#777;--border:#e2d8cc}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:"DM Sans",sans-serif;background:var(--cream);color:var(--charcoal);overflow-x:hidden}body.lock{overflow:hidden}a{text-decoration:none;color:inherit}img{display:block;max-width:100%}button,input,textarea{font:inherit}.flag-stripe{height:5px;background:linear-gradient(90deg,var(--green) 33.3%,#fff 33.3% 66.6%,var(--red) 66.6%)}
+header{position:fixed;top:0;left:0;width:100%;z-index:100;background:#fff;border-bottom:3px solid var(--red);box-shadow:0 2px 18px #0002}.navbar{max-width:1400px;height:80px;margin:auto;padding:0 40px;display:flex;align-items:center;justify-content:space-between;gap:18px}.logo-wrap{display:flex;align-items:center;gap:12px}.logo-circle{width:56px;height:56px;border-radius:50%;background:#fff;border:2px solid var(--red);display:grid;place-items:center;flex:none;overflow:hidden}.logo-circle svg{width:100%;height:100%}.logo-txt{font-family:"Bebas Neue";font-size:1.5rem;letter-spacing:3px;line-height:1.05}.logo-txt span{color:var(--red)}.logo-txt em{display:block;color:var(--green);font-style:normal;font-size:.95rem;letter-spacing:2px}.nav-links{display:flex;gap:28px}.nav-links a{font-size:.78rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase}.nav-links a:hover{color:var(--red)}
+.btn-cart,.btn-primary,.btn-wa,.btn-size,.btn-add-sz,.btn-confirm,.pix-wa{border:0;border-radius:6px;cursor:pointer;font-weight:800;letter-spacing:1px;text-transform:uppercase;display:inline-flex;align-items:center;justify-content:center;gap:9px;transition:.2s}.btn-cart{position:relative;background:var(--red);color:#fff;padding:10px 20px;font-size:.76rem}.btn-cart:hover{background:var(--red-dk)}.cart-badge,.cart-dot,.qty-pill{background:var(--green);color:#fff;border-radius:50%;display:grid;place-items:center;font-weight:800}.cart-badge{position:absolute;top:-6px;right:-6px;width:18px;height:18px;font-size:.6rem}.cart-dot{width:18px;height:18px;font-size:.58rem}
+.hero{min-height:100vh;position:relative;display:flex;align-items:center;background:var(--dark);overflow:hidden}.hero-bg,.hero-overlay{position:absolute;inset:0}.hero-bg img{width:100%;height:100%;object-fit:cover;opacity:.28}.hero-overlay{background:linear-gradient(110deg,rgba(192,24,26,.93),rgba(192,24,26,.7) 34%,rgba(28,28,28,.66) 64%,rgba(27,107,46,.64))}.hero-content{position:relative;z-index:1;max-width:1400px;margin:auto;padding:140px 40px 80px;display:grid;grid-template-columns:1fr 420px;gap:60px;align-items:center;width:100%}.hero-eyebrow{display:inline-flex;gap:8px;align-items:center;background:#ffffff20;border:1px solid #ffffff45;padding:7px 16px;border-radius:4px;color:#fff;font-size:.7rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:24px}.hero h1{font-family:"Bebas Neue";font-size:6.5rem;line-height:.88;letter-spacing:2px;color:#fff;margin-bottom:22px}.hero h1 em{display:block;font-family:"Playfair Display";font-size:5rem;color:var(--gold-lt)}.hero-desc{max-width:450px;color:#ffffffc7;line-height:1.8;margin-bottom:36px}.hero-btns{display:flex;gap:12px;flex-wrap:wrap}.btn-primary{background:#fff;color:var(--red);padding:15px 30px;border:2px solid #fff;font-size:.82rem}.btn-primary:hover{background:var(--gold-lt);border-color:var(--gold-lt);color:#111}.btn-wa{background:#25d366;color:#fff;padding:15px 30px;border:2px solid #25d366;font-size:.82rem}.hero-logo-wrap{width:270px;height:270px;border-radius:50%;background:#fff;display:grid;place-items:center;box-shadow:0 0 0 4px #ffffff40,0 0 80px #c0181a73;overflow:hidden}.hero-logo-wrap svg{width:100%;height:100%}.hero-right{display:flex;flex-direction:column;align-items:center;gap:22px}.hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:2px;width:100%;border:1px solid #ffffff29;border-radius:10px;overflow:hidden}.stat-box{background:#ffffff14;text-align:center;padding:22px 16px}.stat-num{font-family:"Bebas Neue";font-size:2.8rem;color:var(--gold-lt);line-height:1}.stat-lbl{font-size:.65rem;letter-spacing:1.5px;text-transform:uppercase;color:#ffffff9e}
+.container{max-width:1400px;margin:auto;padding:0 40px}.menu-section{padding:100px 0;border-top:4px solid var(--red)}.menu-hd{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:42px}.sec-eye{font-size:.68rem;letter-spacing:3px;text-transform:uppercase;color:var(--red);font-weight:800;margin-bottom:10px;display:flex;align-items:center;gap:8px}.sec-eye:before{content:"";width:24px;height:2px;background:var(--red)}.sec-title{font-family:"Bebas Neue";font-size:3.8rem;line-height:.95;letter-spacing:2px}.sec-title span{color:var(--red)}.menu-hd-right{max-width:320px;color:var(--gray);font-size:.9rem;line-height:1.7;text-align:right}.tabs-bar{display:flex;gap:3px;background:#fff;border:2px solid var(--border);border-radius:8px;padding:4px;width:fit-content;margin-bottom:40px;box-shadow:0 2px 8px #0001}.tab-btn{padding:11px 22px;border:0;border-radius:5px;background:transparent;color:var(--gray);cursor:pointer;font-size:.74rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;display:flex;align-items:center;gap:7px}.tab-btn:hover{background:var(--cream-dk);color:#111}.tab-btn.active{background:var(--red);color:#fff}.tab-btn.tab-doce.active{background:#7b3f00}.tab-btn.tab-beb.active{background:var(--green)}.tab-btn.tab-cart.active{background:#111}.tab-panel{display:none}.tab-panel.active{display:block}
+.pizzas-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:18px}.pizza-card{background:#fff;border:1px solid var(--border);border-radius:12px;overflow:hidden;box-shadow:0 2px 10px #0001;cursor:pointer;transition:.25s}.pizza-card:hover{transform:translateY(-4px);border-color:var(--red);box-shadow:0 14px 36px #c0181a21}.pizza-img{height:185px;position:relative;overflow:hidden;background:#1a0a05}.pizza-img img{width:100%;height:100%;object-fit:cover;transition:.45s}.pizza-card:hover img{transform:scale(1.06)}.pizza-tag{position:absolute;top:10px;left:10px;z-index:1;background:var(--red);color:#fff;font-size:.58rem;font-weight:900;letter-spacing:1.5px;text-transform:uppercase;padding:4px 10px;border-radius:3px}.pizza-tag.green{background:var(--green)}.pizza-tag.gold{background:var(--gold);color:#111}.pizza-body{padding:14px 16px}.pizza-body h3{font-family:"Playfair Display";font-size:1.08rem;margin-bottom:4px}.pizza-body p{font-size:.78rem;line-height:1.55;color:var(--gray)}.pizza-footer{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:11px 16px;border-top:1px solid var(--border);background:#fbf6ee99}.pizza-price{font-family:"Bebas Neue";font-size:1.5rem;color:var(--red)}.pizza-price small{display:block;font-family:"DM Sans";font-size:.6rem;color:var(--gray);letter-spacing:1px;text-transform:uppercase}.btn-size{background:var(--red);color:#fff;padding:9px 14px;font-size:.7rem}.btn-size.doce{background:#7b3f00}.btn-size:hover{filter:brightness(.9)}
+.drinks-wrap{display:flex;flex-direction:column;gap:32px}.dcat-title{font-family:"Bebas Neue";font-size:1.7rem;letter-spacing:2px;margin-bottom:12px;display:flex;align-items:center;gap:10px}.drinks-list{display:grid;grid-template-columns:1fr 1fr;gap:7px}.drink-item{display:flex;align-items:center;justify-content:space-between;gap:10px;background:#fff;border:1px solid var(--border);border-radius:8px;padding:10px 14px}.drink-name{font-size:.84rem;font-weight:700}.drink-right{display:flex;align-items:center;gap:10px}.drink-price{font-family:"Bebas Neue";font-size:1.15rem;color:var(--red)}.btn-dadd{width:28px;height:28px;border:0;border-radius:4px;background:var(--green);color:#fff;cursor:pointer}
+#tab-cart{background:#fff;border:1px solid var(--border);border-radius:12px;padding:28px}.cart-layout{display:grid;grid-template-columns:1fr 370px;gap:28px;align-items:start}.cart-empty{text-align:center;padding:60px 20px}.cart-empty i{font-size:3.5rem;color:var(--border);margin-bottom:14px}.cart-col-title{font-family:"Bebas Neue";font-size:1.7rem;letter-spacing:2px;display:flex;align-items:center;gap:10px;margin-bottom:18px}.qty-pill{width:26px;height:26px;font-size:.9rem}.cart-item{display:flex;align-items:center;gap:14px;background:var(--cream);border:1px solid var(--border);border-radius:10px;padding:14px;margin-bottom:10px}.citem-img{width:64px;height:64px;border-radius:8px;overflow:hidden;flex:none;background:#1a0a05}.citem-info{flex:1}.citem-info strong{display:block;font-size:.87rem}.citem-info span{font-size:.76rem;color:var(--gray)}.citem-price{font-family:"Bebas Neue";font-size:1.45rem;color:var(--red);min-width:76px;text-align:right}.qty-ctrl{display:flex;align-items:center;gap:8px;margin-top:8px}.qty-btn{width:26px;height:26px;border-radius:4px;border:1.5px solid var(--border);background:#fff;cursor:pointer;font-weight:800}.qty-btn:hover{background:var(--red);border-color:var(--red);color:#fff}.pay-box{position:sticky;top:96px;background:var(--cream);border:2px solid var(--border);border-radius:14px;overflow:hidden}.pay-hd{background:#111;padding:18px 22px;display:flex;align-items:center;gap:10px;color:#fff}.pay-hd i{color:var(--gold-lt)}.pay-hd h4{font-family:"Bebas Neue";font-size:1.4rem;letter-spacing:2px}.pay-bd{padding:22px}.sum-row{display:flex;justify-content:space-between;color:var(--gray);font-size:.86rem;margin-bottom:7px}.sum-row.total{border-top:2px solid var(--border);padding-top:12px;margin-top:4px;color:#111;font-weight:800}.sum-row.total .val{font-family:"Bebas Neue";font-size:1.7rem;color:var(--red)}
 
-/* ─── NOISE OVERLAY ─── */
-body::before{
-  content:'';position:fixed;top:0;left:0;width:100%;height:100%;
-  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
-  pointer-events:none;z-index:9999;opacity:.4;
-}
+/* MODO DE RECEBIMENTO */
+.receive-block{background:#fff;border:2px solid var(--border);border-radius:12px;padding:16px;margin-bottom:16px}.receive-hd{font-size:.65rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#111;display:flex;gap:7px;align-items:center;margin-bottom:12px}.receive-opts{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}.ropt{border:2px solid var(--border);border-radius:10px;padding:12px 8px;text-align:center;cursor:pointer;background:#fff;transition:.2s}.ropt:hover{border-color:#aaa}.ropt.sel.delivery{border-color:var(--green);background:#1b6b2e12}.ropt.sel.buscar{border-color:var(--gold);background:#d4a01714}.ropt.sel.local{border-color:var(--red);background:#c0181a0d}.ropt i{display:block;font-size:1.4rem;color:var(--gray);margin-bottom:6px;transition:.2s}.ropt.sel.delivery i{color:var(--green)}.ropt.sel.buscar i{color:var(--gold)}.ropt.sel.local i{color:var(--red)}.ropt-lbl{display:block;font-size:.68rem;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:var(--gray)}.ropt.sel .ropt-lbl{color:#111}.ropt-sub{display:block;font-size:.6rem;color:var(--gray);margin-top:2px;line-height:1.3}
+.info-chip{display:flex;align-items:center;gap:8px;border-radius:8px;padding:11px 14px;font-size:.8rem;font-weight:600;margin-bottom:14px}.info-chip.green{background:#1b6b2e12;border:1.5px solid #1b6b2e33;color:var(--green-dk)}.info-chip.gold{background:#d4a01714;border:1.5px solid #d4a01744;color:#7a5f00}.info-chip.red{background:#c0181a0d;border:1.5px solid #c0181a33;color:var(--red-dk)}
 
-/* ─── HEADER ─── */
-header{
-  position:fixed;top:0;left:0;width:100%;z-index:900;
-  background:var(--white);
-  border-bottom:3px solid var(--red);
-  box-shadow:0 2px 20px rgba(0,0,0,.08);
-  transition:.3s;
-}
-.navbar{
-  display:flex;justify-content:space-between;align-items:center;
-  max-width:1400px;margin:auto;padding:16px 40px;
-}
-.logo{
-  font-family:'Bebas Neue',sans-serif;
-  font-size:2rem;letter-spacing:3px;
-  color:var(--charcoal);
-}
-.logo span{color:var(--red);}
-.logo em{color:var(--green);font-style:normal;}
-.nav-links{display:flex;gap:30px;align-items:center;}
-.nav-links a{
-  font-size:.82rem;font-weight:600;letter-spacing:1.5px;
-  text-transform:uppercase;color:var(--charcoal);
-  transition:.3s;position:relative;
-}
-.nav-links a::after{
-  content:'';position:absolute;bottom:-4px;left:0;
-  width:0;height:2px;background:var(--red);transition:.3s;
-}
-.nav-links a:hover{color:var(--red);}
-.nav-links a:hover::after{width:100%;}
-
-.btn-nav{
-  background:var(--red);color:var(--white);
-  padding:11px 22px;border-radius:4px;
-  font-size:.78rem;font-weight:700;letter-spacing:1.5px;
-  text-transform:uppercase;transition:.3s;
-  border:2px solid var(--red);
-  display:flex;align-items:center;gap:8px;
-  position:relative;
-}
-.btn-nav .cart-count{
-  background:var(--green);color:white;
-  border-radius:50%;width:18px;height:18px;
-  font-size:.65rem;font-weight:700;
-  display:flex;align-items:center;justify-content:center;
-  position:absolute;top:-6px;right:-6px;
-  transition:.3s;
-}
-.btn-nav:hover{background:var(--red-dark);border-color:var(--red-dark);}
-
-/* ─── HERO ─── */
-.hero{
-  min-height:100vh;position:relative;
-  display:flex;align-items:center;
-  overflow:hidden;background:var(--charcoal);
-}
-.hero-bg{position:absolute;inset:0;}
-.hero-bg img{width:100%;height:100%;object-fit:cover;opacity:.35;}
-.hero-flag{
-  position:absolute;inset:0;
-  background:linear-gradient(105deg,
-    rgba(204,31,31,.88) 0%,
-    rgba(204,31,31,.7) 30%,
-    rgba(20,20,20,.65) 60%,
-    rgba(26,122,46,.6) 100%
-  );
-}
-.hero-content{
-  position:relative;z-index:2;
-  max-width:1400px;margin:auto;
-  padding:160px 40px 80px;
-  display:grid;grid-template-columns:1fr 1fr;
-  gap:60px;align-items:center;
-}
-.hero-eyebrow{
-  display:inline-flex;align-items:center;gap:10px;
-  background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.3);
-  padding:6px 16px;border-radius:2px;
-  font-size:.72rem;letter-spacing:2px;text-transform:uppercase;
-  color:var(--white);margin-bottom:28px;backdrop-filter:blur(6px);
-}
-.hero h1{
-  font-family:'Bebas Neue',sans-serif;
-  font-size:7rem;line-height:.9;
-  letter-spacing:2px;margin-bottom:28px;
-  color:var(--white);
-}
-.hero h1 em{
-  font-family:'Playfair Display',sans-serif;
-  font-style:italic;color:#FFCB47;
-  font-size:4.8rem;display:block;
-}
-.hero-desc{
-  color:rgba(255,255,255,.75);font-size:1rem;line-height:1.8;
-  max-width:440px;margin-bottom:44px;
-}
-.hero-actions{display:flex;gap:14px;flex-wrap:wrap;}
-.btn-primary{
-  display:inline-flex;align-items:center;gap:10px;
-  background:var(--red);color:white;
-  padding:16px 32px;border-radius:4px;
-  font-weight:700;font-size:.85rem;letter-spacing:1px;
-  text-transform:uppercase;transition:.3s;
-  border:2px solid var(--red);
-}
-.btn-primary i{transition:.3s;}
-.btn-primary:hover{background:var(--red-dark);border-color:var(--red-dark);}
-.btn-primary:hover i{transform:translateX(4px);}
-.btn-green{
-  display:inline-flex;align-items:center;gap:10px;
-  background:var(--green);color:white;
-  padding:16px 32px;border-radius:4px;
-  font-weight:700;font-size:.85rem;letter-spacing:1px;
-  text-transform:uppercase;transition:.3s;
-  border:2px solid var(--green);
-}
-.btn-green:hover{background:var(--green-dark);}
-.btn-ghost{
-  display:inline-flex;align-items:center;gap:10px;
-  border:2px solid rgba(255,255,255,.4);color:white;
-  padding:16px 32px;border-radius:4px;
-  font-weight:600;font-size:.85rem;letter-spacing:1px;
-  text-transform:uppercase;transition:.3s;
-}
-.btn-ghost:hover{border-color:white;}
-
-.hero-right{display:flex;flex-direction:column;gap:18px;}
-.hero-stats{
-  display:grid;grid-template-columns:1fr 1fr;gap:2px;
-  border-radius:10px;overflow:hidden;
-  border:1px solid rgba(255,255,255,.15);
-}
-.stat-box{
-  background:rgba(255,255,255,.08);backdrop-filter:blur(8px);
-  padding:26px;text-align:center;
-  border-right:1px solid rgba(255,255,255,.1);
-  border-bottom:1px solid rgba(255,255,255,.1);
-}
-.stat-box:nth-child(2){border-right:none;}
-.stat-box:nth-child(3){border-bottom:none;}
-.stat-box:nth-child(4){border-right:none;border-bottom:none;}
-.stat-number{
-  font-family:'Bebas Neue',sans-serif;
-  font-size:3.2rem;color:#FFCB47;line-height:1;margin-bottom:6px;
-}
-.stat-label{font-size:.7rem;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.6);}
-.hero-badge{
-  background:rgba(26,122,46,.3);border:1px solid rgba(26,122,46,.5);
-  border-radius:10px;padding:22px 26px;
-  display:flex;align-items:center;gap:18px;backdrop-filter:blur(8px);
-}
-.badge-icon{font-size:2.2rem;color:#4ade80;}
-.badge-text strong{display:block;font-size:1rem;margin-bottom:4px;color:white;}
-.badge-text span{font-size:.82rem;color:rgba(255,255,255,.6);}
-
-/* ─── SECTION SHARED ─── */
-.container{max-width:1400px;margin:auto;padding:0 40px;}
-.section-tag{
-  font-size:.7rem;letter-spacing:3px;text-transform:uppercase;
-  color:var(--red);margin-bottom:12px;
-  display:flex;align-items:center;gap:10px;font-weight:700;
-}
-.section-tag::before{content:'';width:28px;height:2px;background:var(--red);}
-
-/* ─── MENU SECTION ─── */
-.menu-section{
-  padding:100px 0;
-  background:var(--cream);
-  border-top:4px solid var(--red);
-}
-.section-header{
-  display:flex;justify-content:space-between;align-items:flex-end;
-  margin-bottom:50px;
-}
-.section-header h2{
-  font-family:'Bebas Neue',sans-serif;
-  font-size:4.2rem;line-height:.95;letter-spacing:2px;color:var(--charcoal);
-}
-.section-header h2 span{color:var(--red);}
-.section-desc{
-  max-width:320px;color:var(--warm-gray);
-  font-size:.9rem;line-height:1.8;text-align:right;
-}
-
-/* ─── TABS ─── */
-.tabs-wrapper{margin-bottom:44px;}
-.tabs{
-  display:flex;gap:4px;
-  background:var(--white);
-  border:2px solid var(--border-light);
-  border-radius:8px;padding:5px;
-  width:fit-content;
-  box-shadow:0 2px 8px rgba(0,0,0,.06);
-}
-.tab-btn{
-  padding:12px 24px;border-radius:5px;
-  font-size:.78rem;font-weight:700;letter-spacing:1.2px;
-  text-transform:uppercase;cursor:pointer;
-  border:none;background:transparent;color:var(--warm-gray);
-  transition:.3s;display:flex;align-items:center;gap:8px;
-  position:relative;
-}
-.tab-btn i{font-size:.95rem;}
-.tab-btn.active{background:var(--red);color:white;}
-.tab-btn.active.green-tab{background:var(--green);}
-.tab-btn:hover:not(.active){color:var(--charcoal);}
-.cart-badge-tab{
-  background:var(--green);color:white;
-  border-radius:50%;width:18px;height:18px;
-  font-size:.62rem;font-weight:800;
-  display:flex;align-items:center;justify-content:center;
-}
-.tab-panel{display:none;}
-.tab-panel.active{display:block;}
-
-/* ─── CARDS PIZZA ─── */
-.items-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(290px,1fr));
-  gap:22px;
-}
-.item-card{
-  background:var(--white);
-  border:1px solid var(--border-light);
-  border-radius:12px;overflow:hidden;
-  transition:.35s;cursor:pointer;
-  position:relative;
-  box-shadow:0 2px 8px rgba(0,0,0,.05);
-}
-.item-card:hover{
-  transform:translateY(-5px);
-  border-color:var(--red);
-  box-shadow:0 16px 40px rgba(204,31,31,.12);
-}
-.card-img{height:210px;overflow:hidden;position:relative;}
-.card-img img{height:100%;object-fit:cover;transition:.5s;}
-.item-card:hover .card-img img{transform:scale(1.07);}
-.card-badge{
-  position:absolute;top:12px;left:12px;
-  background:var(--red);color:white;
-  font-size:.62rem;font-weight:800;letter-spacing:1.5px;
-  text-transform:uppercase;padding:4px 10px;border-radius:3px;
-}
-.card-badge.green{background:var(--green);}
-.card-body{padding:22px;}
-.card-body h3{
-  font-family:'Playfair Display',sans-serif;
-  font-size:1.3rem;font-weight:700;margin-bottom:6px;color:var(--charcoal);
-}
-.card-body p{color:var(--warm-gray);font-size:.87rem;line-height:1.6;margin-bottom:18px;}
-.card-footer{
-  display:flex;justify-content:space-between;align-items:center;
-  padding:16px 22px;border-top:1px solid var(--border-light);
-  background:rgba(249,245,240,.6);
-}
-.price{
-  font-family:'Bebas Neue',sans-serif;
-  font-size:1.9rem;color:var(--red);letter-spacing:1px;
-}
-.price small{
-  font-family:'DM Sans',sans-serif;
-  font-size:.68rem;font-weight:600;
-  color:var(--warm-gray);letter-spacing:1px;
-  text-transform:uppercase;display:block;line-height:1;
-}
-.btn-add{
-  display:inline-flex;align-items:center;gap:7px;
-  background:var(--green);color:white;
-  padding:10px 18px;border-radius:4px;
-  font-size:.76rem;font-weight:700;letter-spacing:1px;
-  text-transform:uppercase;transition:.3s;border:none;cursor:pointer;
-}
-.btn-add:hover{background:var(--green-dark);}
-.btn-add i{font-size:.8rem;}
-
-/* ─── BEBIDAS ─── */
-.drinks-grid{
-  display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:18px;
-}
-.drink-card{
-  background:var(--white);border:1px solid var(--border-light);
-  border-radius:10px;overflow:hidden;transition:.3s;text-align:center;
-  box-shadow:0 2px 8px rgba(0,0,0,.04);
-}
-.drink-card:hover{transform:translateY(-4px);border-color:var(--green);box-shadow:0 12px 30px rgba(26,122,46,.1);}
-.drink-img{height:170px;overflow:hidden;}
-.drink-img img{height:100%;object-fit:cover;transition:.5s;}
-.drink-card:hover .drink-img img{transform:scale(1.05);}
-.drink-body{padding:18px;}
-.drink-body h3{font-size:1rem;font-weight:700;margin-bottom:5px;}
-.drink-body p{color:var(--warm-gray);font-size:.8rem;margin-bottom:12px;}
-.drink-price{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;color:var(--red);margin-bottom:12px;}
-.btn-drink-add{
-  display:block;
-  background:var(--green);color:white;
-  padding:9px;border-radius:4px;
-  font-size:.73rem;font-weight:700;letter-spacing:1px;
-  text-transform:uppercase;transition:.3s;border:none;cursor:pointer;width:100%;
-}
-.btn-drink-add:hover{background:var(--green-dark);}
-
-/* ─── CARRINHO + PAGAMENTO ─── */
-#tab-carrinho{background:var(--white);border-radius:12px;padding:30px;border:1px solid var(--border-light);}
-.cart-layout{display:grid;grid-template-columns:1fr 380px;gap:30px;align-items:start;}
-.cart-empty{
-  text-align:center;padding:60px 20px;
-  grid-column:1/-1;
-}
-.cart-empty i{font-size:4rem;color:var(--border-light);margin-bottom:16px;display:block;}
-.cart-empty p{color:var(--warm-gray);font-size:1rem;}
-.cart-empty a{
-  display:inline-flex;align-items:center;gap:8px;
-  margin-top:20px;background:var(--red);color:white;
-  padding:12px 24px;border-radius:4px;font-size:.8rem;
-  font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer;border:none;
-}
-
-.cart-items-col h3{
-  font-family:'Bebas Neue',sans-serif;font-size:1.8rem;letter-spacing:2px;
-  color:var(--charcoal);margin-bottom:20px;
-  display:flex;align-items:center;gap:10px;
-}
-.cart-items-col h3 span{
-  background:var(--red);color:white;
-  border-radius:50%;width:28px;height:28px;
-  font-size:1rem;display:flex;align-items:center;justify-content:center;
-}
-
-.cart-item{
-  display:flex;align-items:center;gap:16px;
-  padding:16px;border:1px solid var(--border-light);
-  border-radius:10px;margin-bottom:12px;background:var(--cream);
-  transition:.2s;
-}
-.cart-item:hover{border-color:var(--red);}
-.cart-item-img{
-  width:70px;height:70px;border-radius:8px;overflow:hidden;flex-shrink:0;
-}
-.cart-item-img img{height:100%;object-fit:cover;}
-.cart-item-info{flex:1;}
-.cart-item-info strong{display:block;font-size:.95rem;font-weight:700;margin-bottom:3px;}
-.cart-item-info span{font-size:.82rem;color:var(--warm-gray);}
-.cart-item-price{
-  font-family:'Bebas Neue',sans-serif;font-size:1.6rem;color:var(--red);
-  min-width:80px;text-align:right;
-}
-.cart-qty{display:flex;align-items:center;gap:10px;margin-top:8px;}
-.qty-btn{
-  width:28px;height:28px;border-radius:4px;border:1.5px solid var(--border-light);
-  background:white;color:var(--charcoal);font-size:1rem;font-weight:700;
-  cursor:pointer;display:flex;align-items:center;justify-content:center;
-  transition:.2s;
-}
-.qty-btn:hover{background:var(--red);border-color:var(--red);color:white;}
-.qty-btn.remove-btn:hover{background:var(--red);border-color:var(--red);}
-.qty-num{font-weight:700;font-size:.9rem;min-width:20px;text-align:center;}
-
-/* ─── PAGAMENTO BOX ─── */
-.payment-col{
-  background:var(--cream);border:2px solid var(--border-light);
-  border-radius:14px;overflow:hidden;position:sticky;top:100px;
-}
-.payment-header{
-  background:var(--charcoal);padding:20px 24px;
-  display:flex;align-items:center;gap:12px;
-}
-.payment-header i{color:#FFCB47;font-size:1.3rem;}
-.payment-header h4{
-  font-family:'Bebas Neue',sans-serif;font-size:1.5rem;
-  letter-spacing:2px;color:white;
-}
-.payment-body{padding:24px;}
-
-.order-summary{margin-bottom:24px;}
-.summary-row{
-  display:flex;justify-content:space-between;
-  font-size:.88rem;color:var(--warm-gray);margin-bottom:8px;
-}
-.summary-row.total{
-  font-size:1.1rem;font-weight:700;color:var(--charcoal);
-  padding-top:12px;border-top:2px solid var(--border-light);margin-top:4px;
-}
-.summary-row.total .val{
-  font-family:'Bebas Neue',sans-serif;font-size:1.8rem;color:var(--red);
-}
-
-.pay-label{
-  font-size:.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;
-  color:var(--charcoal);margin-bottom:12px;display:block;
-}
-.pay-methods{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:20px;}
-.pay-option{
-  border:2px solid var(--border-light);border-radius:8px;
-  padding:12px;text-align:center;cursor:pointer;transition:.25s;
-  background:white;
-}
-.pay-option:hover{border-color:var(--red);}
-.pay-option.selected{border-color:var(--green);background:rgba(26,122,46,.07);}
-.pay-option i{
-  font-size:1.5rem;display:block;margin-bottom:6px;
-  color:var(--warm-gray);transition:.25s;
-}
-.pay-option.selected i{color:var(--green);}
-.pay-option span{font-size:.72rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--charcoal);}
-
-.obs-label{
-  font-size:.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;
-  color:var(--charcoal);margin-bottom:8px;display:block;
-}
-.obs-input{
-  width:100%;padding:10px 14px;border-radius:6px;
-  border:1.5px solid var(--border-light);background:white;
-  font-family:'DM Sans',sans-serif;font-size:16px;
-  resize:none;transition:.2s;margin-bottom:18px;
-  outline:none;
-}
-.obs-input:focus{border-color:var(--red);}
-
-.btn-confirm{
-  width:100%;display:flex;align-items:center;justify-content:center;gap:10px;
-  background:var(--green);color:white;
-  padding:16px;border-radius:6px;border:none;cursor:pointer;
-  font-family:'DM Sans',sans-serif;font-size:.88rem;font-weight:700;
-  letter-spacing:1px;text-transform:uppercase;transition:.3s;
-}
-.btn-confirm:hover{background:var(--green-dark);}
-.btn-confirm:disabled{opacity:.5;cursor:not-allowed;}
-.btn-confirm i{font-size:1.1rem;}
-.pay-note{
-  text-align:center;font-size:.75rem;color:var(--warm-gray);
-  margin-top:10px;line-height:1.5;
-}
-
-/* ─── ENDEREÇO ─── */
-.address-block{
-  background:rgba(26,122,46,.05);
-  border:1.5px solid rgba(26,122,46,.2);
-  border-radius:10px;padding:18px;margin-bottom:20px;
-}
-.address-block-header{
-  display:flex;align-items:center;gap:8px;
-  font-size:.7rem;font-weight:700;letter-spacing:2px;
-  text-transform:uppercase;color:var(--green);margin-bottom:14px;
-}
-.address-block-header i{font-size:1rem;}
-.addr-grid{display:grid;grid-template-columns:1fr 80px;gap:8px;margin-bottom:8px;}
-.addr-full{grid-column:1/-1;}
-.addr-input{
-  width:100%;padding:10px 12px;border-radius:6px;
-  border:1.5px solid var(--border-light);background:white;
-  font-family:'DM Sans',sans-serif;font-size:16px;
-  outline:none;transition:.2s;color:var(--charcoal);
-}
-.addr-input:focus{border-color:var(--green);}
-.addr-input::placeholder{color:#bbb;}
-.addr-label{
-  font-size:.67rem;font-weight:600;letter-spacing:1px;
-  text-transform:uppercase;color:var(--warm-gray);
-  display:block;margin-bottom:4px;
-}
-.addr-required{color:var(--red);}
-
-/* ─── TROCO ─── */
-.troco-block{
-  background:rgba(255,248,235,.8);
-  border:1.5px solid rgba(212,168,68,.35);
-  border-radius:10px;padding:14px 16px;
-  margin-top:10px;margin-bottom:4px;
-  animation:fadeSlide .2s ease;
-}
-@keyframes fadeSlide{from{opacity:0;transform:translateY(-6px);}to{opacity:1;transform:translateY(0);}}
-.troco-label-top{
-  font-size:.67rem;font-weight:700;letter-spacing:1.5px;
-  text-transform:uppercase;color:#8a6d00;margin-bottom:10px;display:flex;align-items:center;gap:6px;
-}
-.troco-options{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;}
-.troco-chip{
-  padding:7px 14px;border-radius:20px;border:1.5px solid rgba(212,168,68,.4);
-  background:white;color:var(--charcoal);font-size:.8rem;font-weight:700;
-  cursor:pointer;transition:.2s;
-}
-.troco-chip:hover{border-color:var(--gold);background:rgba(212,168,68,.1);}
-.troco-chip.active{background:var(--gold);border-color:var(--gold);color:var(--charcoal);}
-.troco-input-wrap{display:flex;align-items:center;gap:8px;}
-.troco-prefix{font-size:.9rem;font-weight:700;color:var(--charcoal);}
-.troco-input{
-  flex:1;padding:9px 12px;border-radius:6px;
-  border:1.5px solid rgba(212,168,68,.4);background:white;
-  font-family:'DM Sans',sans-serif;font-size:16px;font-weight:700;
-  outline:none;transition:.2s;color:var(--charcoal);
-  -webkit-appearance:none;
-}
-.troco-input:focus{border-color:var(--gold);}
-.troco-input::placeholder{color:#ccc;font-weight:400;}
-
-/* ─── PIX MODAL ─── */
-.pix-modal-overlay{
-  position:fixed;inset:0;background:rgba(0,0,0,.6);
-  z-index:9990;display:flex;align-items:center;justify-content:center;
-  padding:20px;backdrop-filter:blur(4px);
-  opacity:0;pointer-events:none;transition:.25s;
-}
-.pix-modal-overlay.open{opacity:1;pointer-events:all;}
-.pix-modal{
-  background:var(--white);border-radius:16px;
-  max-width:360px;width:100%;
-  box-shadow:0 24px 60px rgba(0,0,0,.3);
-  overflow:hidden;
-  transform:translateY(20px);transition:.25s;
-}
-.pix-modal-overlay.open .pix-modal{transform:translateY(0);}
-.pix-modal-header{
-  background:linear-gradient(135deg,var(--green-dark),var(--green));
-  padding:20px 24px;display:flex;align-items:center;justify-content:space-between;
-}
-.pix-modal-header h3{
-  font-family:'Bebas Neue',sans-serif;font-size:1.6rem;
-  letter-spacing:2px;color:white;display:flex;align-items:center;gap:10px;
-}
-.pix-modal-close{
-  background:rgba(255,255,255,.2);border:none;color:white;
-  width:32px;height:32px;border-radius:50%;cursor:pointer;
-  font-size:1rem;display:flex;align-items:center;justify-content:center;
-  transition:.2s;
-}
-.pix-modal-close:hover{background:rgba(255,255,255,.35);}
-.pix-modal-body{padding:24px;}
-.pix-qr-wrap{
-  background:var(--cream);border:2px dashed var(--border-light);
-  border-radius:12px;padding:20px;text-align:center;margin-bottom:20px;
-}
-.pix-qr-wrap canvas,
-.pix-qr-img{
-  width:180px;height:180px;margin:0 auto 10px;display:block;
-  border-radius:8px;
-}
-.pix-qr-label{font-size:.72rem;color:var(--warm-gray);letter-spacing:1px;text-transform:uppercase;}
-.pix-key-wrap{
-  background:rgba(26,122,46,.06);border:1.5px solid rgba(26,122,46,.25);
-  border-radius:10px;padding:14px 16px;margin-bottom:16px;
-}
-.pix-key-label{font-size:.65rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--green);margin-bottom:6px;}
-.pix-key-row{display:flex;align-items:center;gap:10px;}
-.pix-key-value{
-  flex:1;font-size:1.05rem;font-weight:700;color:var(--charcoal);
-  font-family:'DM Sans',sans-serif;letter-spacing:.5px;
-}
-.pix-copy-btn{
-  background:var(--green);color:white;border:none;
-  padding:8px 14px;border-radius:6px;cursor:pointer;
-  font-size:.75rem;font-weight:700;letter-spacing:1px;
-  text-transform:uppercase;transition:.2s;white-space:nowrap;
-  display:flex;align-items:center;gap:6px;
-}
-.pix-copy-btn:hover{background:var(--green-dark);}
-.pix-copy-btn.copied{background:#059669;}
-.pix-note{
-  font-size:.8rem;color:var(--warm-gray);line-height:1.6;
-  text-align:center;padding:0 4px;
-}
-.pix-note strong{color:var(--charcoal);}
-.pix-after-btn{
-  width:100%;margin-top:16px;
-  background:var(--green);color:white;border:none;
-  padding:14px;border-radius:8px;cursor:pointer;
-  font-family:'DM Sans',sans-serif;font-size:.85rem;font-weight:700;
-  letter-spacing:1px;text-transform:uppercase;transition:.2s;
-  display:flex;align-items:center;justify-content:center;gap:8px;
-}
-.pix-after-btn:hover{background:var(--green-dark);}
-
-/* ─── PROMO ─── */
-.promo-section{padding:0 0 100px;background:var(--cream);}
-.promo-banner{
-  background:linear-gradient(135deg,var(--red-dark) 0%,var(--red) 50%,var(--green-dark) 100%);
-  border-radius:14px;overflow:hidden;padding:70px 60px;
-  display:grid;grid-template-columns:1fr auto;align-items:center;gap:40px;
-  position:relative;
-}
-.promo-banner::before{
-  content:'OFERTA';position:absolute;top:-10px;right:50px;
-  font-family:'Bebas Neue',sans-serif;font-size:9rem;
-  color:rgba(255,255,255,.04);letter-spacing:10px;line-height:1;
-}
-.promo-tag{
-  display:inline-block;background:#FFCB47;color:var(--charcoal);
-  font-size:.68rem;font-weight:800;letter-spacing:2px;
-  text-transform:uppercase;padding:5px 14px;border-radius:3px;margin-bottom:18px;
-}
-.promo-banner h2{
-  font-family:'Bebas Neue',sans-serif;font-size:3.8rem;letter-spacing:2px;
-  line-height:1;margin-bottom:12px;color:white;
-}
-.promo-banner p{color:rgba(255,255,255,.8);font-size:.95rem;line-height:1.7;}
-.promo-price-box{
-  text-align:center;background:rgba(0,0,0,.25);
-  border:1px solid rgba(255,255,255,.2);border-radius:12px;
-  padding:36px 44px;min-width:220px;
-}
-.promo-from{
-  font-size:.72rem;letter-spacing:1.5px;text-transform:uppercase;
-  color:rgba(255,255,255,.5);margin-bottom:6px;text-decoration:line-through;
-}
-.promo-to{
-  font-family:'Bebas Neue',sans-serif;font-size:4.8rem;color:#FFCB47;line-height:1;margin-bottom:3px;
-}
-.promo-to small{font-size:2rem;}
-.promo-currency{font-family:'Bebas Neue',sans-serif;font-size:1.1rem;color:#FFCB47;opacity:.7;margin-bottom:22px;letter-spacing:1px;}
-
-/* ─── SOBRE ─── */
-.why-section{padding:100px 0;background:var(--white);border-top:4px solid var(--green);}
-.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
-.why-visual{position:relative;}
-.why-img-main{border-radius:12px;overflow:hidden;height:500px;}
-.why-img-main img{height:100%;object-fit:cover;}
-.why-img-float{
-  position:absolute;bottom:-28px;right:-28px;
-  width:200px;height:200px;border-radius:12px;overflow:hidden;
-  border:4px solid var(--white);box-shadow:0 16px 50px rgba(0,0,0,.15);
-}
-.why-img-float img{height:100%;object-fit:cover;}
-.why-label{
-  position:absolute;top:28px;left:28px;
-  background:var(--red);color:white;
-  padding:12px 18px;border-radius:8px;
-}
-.why-label span{font-family:'Bebas Neue',sans-serif;font-size:2.3rem;display:block;line-height:1;}
-.why-label p{font-size:.72rem;letter-spacing:1.5px;text-transform:uppercase;opacity:.85;}
-.why-content h2{
-  font-family:'Bebas Neue',sans-serif;font-size:3.8rem;line-height:.95;
-  letter-spacing:2px;margin-bottom:22px;color:var(--charcoal);
-}
-.why-content h2 span{color:var(--red);}
-.why-content>p{color:var(--warm-gray);font-size:.95rem;line-height:1.8;margin-bottom:36px;}
-.features{display:flex;flex-direction:column;gap:16px;}
-.feature-item{
-  display:flex;gap:18px;align-items:flex-start;
-  padding:18px;border-radius:8px;border:1.5px solid var(--border-light);transition:.3s;
-}
-.feature-item:hover{border-color:var(--red);background:rgba(204,31,31,.03);}
-.feature-icon{
-  width:46px;height:46px;border-radius:6px;
-  background:rgba(204,31,31,.1);display:flex;align-items:center;justify-content:center;
-  font-size:1.2rem;color:var(--red);flex-shrink:0;
-}
-.feature-text strong{display:block;font-size:.95rem;margin-bottom:3px;color:var(--charcoal);}
-.feature-text p{color:var(--warm-gray);font-size:.86rem;line-height:1.6;}
-
-/* ─── GALERIA ─── */
-.gallery-section{padding:100px 0;background:var(--cream);}
-.gallery-header{text-align:center;margin-bottom:50px;}
-.gallery-header .section-tag{justify-content:center;margin-bottom:14px;}
-.gallery-header .section-tag::before{display:none;}
-.gallery-header h2{
-  font-family:'Bebas Neue',sans-serif;font-size:4.2rem;
-  letter-spacing:2px;color:var(--charcoal);
-}
-.gallery-header h2 span{color:var(--red);}
-.gallery-masonry{
-  display:grid;grid-template-columns:repeat(4,1fr);
-  grid-template-rows:auto;gap:14px;
-}
-.gallery-item{border-radius:10px;overflow:hidden;position:relative;cursor:pointer;}
-.gallery-item img{height:100%;object-fit:cover;transition:.5s;}
-.gallery-item:hover img{transform:scale(1.05);}
-.gallery-item::after{content:'';position:absolute;inset:0;background:rgba(0,0,0,0);transition:.3s;}
-.gallery-item:hover::after{background:rgba(204,31,31,.18);}
-.g1{grid-column:span 2;grid-row:span 2;height:400px;}
-.g2,.g3,.g4,.g5{height:193px;}
-
-/* ─── REVIEWS ─── */
-.reviews-section{padding:90px 0;background:var(--white);}
-.reviews-header{text-align:center;margin-bottom:50px;}
-.reviews-header .section-tag{justify-content:center;margin-bottom:14px;}
-.reviews-header .section-tag::before{display:none;}
-.reviews-header h2{
-  font-family:'Bebas Neue',sans-serif;font-size:3.8rem;
-  letter-spacing:2px;color:var(--charcoal);
-}
-.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
-.review-card{
-  background:var(--cream);border:1.5px solid var(--border-light);
-  border-radius:12px;padding:28px;position:relative;transition:.3s;
-}
-.review-card:hover{border-color:var(--red);box-shadow:0 8px 24px rgba(204,31,31,.08);}
-.review-card::before{
-  content:'"';font-family:'Playfair Display',sans-serif;
-  font-size:7rem;color:var(--red);opacity:.1;
-  position:absolute;top:-15px;left:16px;line-height:1;
-}
-.stars{color:var(--red);font-size:.88rem;margin-bottom:14px;}
-.review-text{color:var(--warm-gray);font-size:.9rem;line-height:1.8;font-style:italic;margin-bottom:20px;}
-.reviewer{display:flex;align-items:center;gap:12px;}
-.reviewer-avatar{
-  width:40px;height:40px;border-radius:50%;
-  background:var(--red);color:white;
-  display:flex;align-items:center;justify-content:center;
-  font-size:.8rem;font-weight:700;flex-shrink:0;
-}
-.reviewer-name{font-weight:700;font-size:.88rem;}
-.reviewer-sub{color:var(--warm-gray);font-size:.78rem;}
-
-/* ─── INFO BAR ─── */
-.info-bar{
-  background:var(--charcoal);padding:50px 0;
-  border-top:4px solid var(--red);border-bottom:4px solid var(--green);
-}
-.info-grid{
-  display:grid;grid-template-columns:repeat(4,1fr);
-  gap:0;max-width:1400px;margin:auto;padding:0 40px;
-}
-.info-item{text-align:center;padding:0 28px;border-right:1px solid rgba(255,255,255,.1);}
-.info-item:last-child{border-right:none;}
-.info-item i{font-size:1.8rem;color:var(--red);margin-bottom:12px;display:block;}
-.info-item strong{
-  font-family:'Bebas Neue',sans-serif;font-size:1.5rem;
-  letter-spacing:1px;display:block;margin-bottom:3px;color:white;
-}
-.info-item span{font-size:.8rem;color:rgba(255,255,255,.55);}
-
-/* ─── FOOTER ─── */
-footer{
-  background:var(--dark);border-top:1px solid #222;padding:70px 0 28px;
-}
-.footer-grid{
-  display:grid;grid-template-columns:2fr 1fr 1fr 1fr;
-  gap:50px;margin-bottom:50px;
-}
-.footer-brand .logo{font-size:1.7rem;margin-bottom:14px;color:white;}
-.footer-brand p{color:#666;font-size:.87rem;line-height:1.8;max-width:260px;margin-bottom:20px;}
-.social-links{display:flex;gap:9px;}
-.social-links a{
-  width:38px;height:38px;border-radius:6px;border:1px solid #333;
-  display:flex;align-items:center;justify-content:center;
-  color:#666;font-size:.9rem;transition:.3s;
-}
-.social-links a:hover{background:var(--red);border-color:var(--red);color:white;}
-.footer-col h4{font-size:.7rem;letter-spacing:2.5px;text-transform:uppercase;color:var(--red);margin-bottom:20px;font-weight:700;}
-.footer-col a,.footer-col p{display:block;color:#666;font-size:.87rem;line-height:2.2;transition:.3s;}
-.footer-col a:hover{color:white;}
-.footer-col p i{margin-right:8px;color:var(--red);}
-.footer-bottom{
-  border-top:1px solid #1f1f1f;padding-top:22px;
-  display:flex;justify-content:space-between;align-items:center;
-}
-.footer-bottom p{color:#444;font-size:.8rem;}
-.footer-bottom span{color:var(--red);}
-
-/* ─── WHATSAPP FLOAT ─── */
-.wa-float{
-  position:fixed;bottom:28px;right:28px;z-index:998;
-  width:58px;height:58px;border-radius:50%;
-  background:#25D366;color:white;
-  display:flex;align-items:center;justify-content:center;
-  font-size:1.5rem;
-  box-shadow:0 8px 24px rgba(37,211,102,.35);transition:.3s;
-}
-.wa-float:hover{transform:scale(1.1);}
-
-/* ─── TOAST ─── */
-.toast{
-  position:fixed;bottom:100px;left:50%;transform:translateX(-50%) translateY(20px);
-  background:var(--green);color:white;
-  padding:12px 24px;border-radius:8px;font-size:.88rem;font-weight:600;
-  box-shadow:0 8px 24px rgba(0,0,0,.2);
-  opacity:0;transition:.3s;z-index:9998;pointer-events:none;
-  display:flex;align-items:center;gap:8px;
-}
-.toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
-
-/* ─── ITALIA FLAG STRIPE ─── */
-.flag-stripe{
-  height:6px;
-  background:linear-gradient(to right,var(--green) 33.3%,var(--white) 33.3% 66.6%,var(--red) 66.6%);
-}
-
-/* ─── RESPONSIVE ─── */
-
-/* Força font-size 16px em TODOS os inputs/selects/textareas — previne zoom iOS */
-input, select, textarea, button {
-  font-size: 16px;
-  -webkit-text-size-adjust: 100%;
-}
-
-@media(max-width:1100px){
-  .hero-content{grid-template-columns:1fr;padding:140px 30px 60px;}
-  .hero-right{display:none;}
-  .why-grid{grid-template-columns:1fr;gap:40px;}
-  .why-visual{display:none;}
-  .gallery-masonry{grid-template-columns:1fr 1fr;}
-  .g1{grid-column:1;grid-row:1;}
-  .footer-grid{grid-template-columns:1fr 1fr;gap:36px;}
-  .info-grid{grid-template-columns:1fr 1fr;gap:24px;}
-  .info-item{border-right:none;border-bottom:1px solid rgba(255,255,255,.08);padding-bottom:24px;}
-  .info-item:nth-child(3),.info-item:nth-child(4){border-bottom:none;}
-  .reviews-grid{grid-template-columns:1fr;}
-  .promo-banner{grid-template-columns:1fr;}
-  .promo-price-box{margin:0 auto;}
-  .cart-layout{grid-template-columns:1fr;}
-  .payment-col{position:static;}
-}
-
-@media(max-width:768px){
-  .nav-links{display:none;}
-  .hero h1{font-size:4.2rem;}
-  .section-header{flex-direction:column;align-items:flex-start;gap:14px;}
-  .section-desc{text-align:left;max-width:100%;}
-  .gallery-masonry{grid-template-columns:1fr;}
-  .g1,.g2,.g3,.g4,.g5{grid-column:1;grid-row:auto;height:220px;}
-  .footer-grid{grid-template-columns:1fr;}
-  .navbar{padding:16px 18px;}
-  .container{padding:0 18px;}
-  .tabs{flex-wrap:wrap;}
-  .pay-methods{grid-template-columns:1fr 1fr;}
-  .menu-section{padding:70px 0;}
-  .why-section{padding:70px 0;}
-  .gallery-section{padding:70px 0;}
-  .reviews-section{padding:60px 0;}
-  .promo-section{padding:0 0 70px;}
-  .promo-banner{padding:40px 24px;}
-  .promo-banner h2{font-size:2.6rem;}
-  .promo-to{font-size:3.6rem;}
-  .section-header h2{font-size:3rem;}
-  .why-content h2{font-size:2.8rem;}
-  .gallery-header h2{font-size:3rem;}
-  .reviews-header h2{font-size:2.8rem;}
-  .hero-actions{flex-direction:column;}
-  .btn-primary,.btn-green,.btn-ghost{width:100%;justify-content:center;}
-  .tabs{width:100%;}
-  .tab-btn{flex:1;justify-content:center;padding:10px 8px;font-size:.7rem;}
-  .items-grid{grid-template-columns:1fr;}
-  .drinks-grid{grid-template-columns:1fr 1fr;}
-  .cart-item{flex-wrap:wrap;gap:12px;}
-  .cart-item-price{width:100%;text-align:left;font-size:1.4rem;}
-  .addr-grid{grid-template-columns:1fr 90px;}
-  .pay-methods{grid-template-columns:1fr 1fr;gap:8px;}
-  .pix-modal{margin:0 12px;}
-  .footer-grid{gap:28px;}
-  .info-grid{padding:0 18px;}
-  .info-bar{padding:36px 0;}
-  #tab-carrinho{padding:16px;}
-}
-
-@media(max-width:390px){
-  .hero h1{font-size:3.4rem;}
-  .hero h1 em{font-size:2.8rem;}
-  .logo{font-size:1.5rem;}
-  .tabs{gap:2px;}
-  .tab-btn{padding:9px 6px;font-size:.65rem;letter-spacing:.5px;}
-  .drinks-grid{grid-template-columns:1fr;}
-  .section-header h2{font-size:2.4rem;}
-  .promo-banner h2{font-size:2rem;}
-  .addr-grid{grid-template-columns:1fr;}
-}
+.addr-block{background:#1b6b2e0d;border:1.5px solid #1b6b2e33;border-radius:10px;padding:16px;margin:0 0 18px}.addr-hd{font-size:.65rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--green);display:flex;gap:7px;margin-bottom:12px}.addr-g2{display:grid;grid-template-columns:1fr 80px;gap:7px;margin-bottom:7px}.fl-lbl,.pay-lbl,.obs-lbl{display:block;font-size:.64rem;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--gray);margin-bottom:4px}.pay-lbl,.obs-lbl{color:#111;margin-bottom:10px}.req{color:var(--red)}.fl-inp{width:100%;padding:9px 11px;border-radius:6px;border:1.5px solid var(--border);background:#fff;outline:0}.fl-inp:focus{border-color:var(--green)}.pay-methods{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:18px}.popt{background:#fff;border:2px solid var(--border);border-radius:8px;padding:11px;text-align:center;cursor:pointer}.popt.sel{border-color:var(--green);background:#1b6b2e12}.popt i{display:block;font-size:1.35rem;color:var(--gray);margin-bottom:5px}.popt.sel i{color:var(--green)}.popt span{font-size:.68rem;font-weight:800;letter-spacing:1px;text-transform:uppercase}.troco-block{background:#fff8dccd;border:1.5px solid #d4a01759;border-radius:10px;padding:13px 15px;margin:-8px 0 14px}.troco-lbl{font-size:.63rem;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#7a5f00;margin-bottom:9px}.troco-chips{display:flex;gap:6px;flex-wrap:wrap}.tchip{border:1.5px solid #d4a01766;background:#fff;border-radius:20px;padding:6px 12px;font-size:.78rem;font-weight:800;cursor:pointer}.tchip.sel{background:var(--gold);border-color:var(--gold);color:#111}.obs-inp{min-height:70px;resize:vertical;margin-bottom:16px}.btn-confirm{width:100%;background:var(--green);color:#fff;padding:15px;font-size:.86rem}.btn-confirm:disabled{opacity:.45;cursor:not-allowed}.pay-hint{text-align:center;font-size:.72rem;line-height:1.5;color:var(--gray);margin-top:9px}
+.reviews-section{padding:80px 0;background:#fff}.reviews-hd{text-align:center;margin-bottom:44px}.reviews-hd .sec-eye{justify-content:center}.reviews-hd .sec-eye:before{display:none}.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.review{background:var(--cream);border:1.5px solid var(--border);border-radius:12px;padding:26px}.stars{color:var(--red);margin-bottom:12px}.review-txt{color:var(--gray);font-size:.88rem;line-height:1.8;font-style:italic;margin-bottom:18px}.reviewer{display:flex;align-items:center;gap:11px}.r-av{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:var(--red);color:#fff;font-size:.76rem;font-weight:800}.r-name{font-weight:800;font-size:.86rem}.r-sub{color:var(--gray);font-size:.75rem}.info-bar{background:#111;padding:44px 0;border-top:4px solid var(--red);border-bottom:4px solid var(--green)}.info-grid{max-width:1400px;margin:auto;padding:0 40px;display:grid;grid-template-columns:repeat(4,1fr)}.info-item{text-align:center;padding:0 24px;border-right:1px solid #ffffff1a}.info-item:last-child{border:0}.info-item i{font-size:1.7rem;color:var(--red);margin-bottom:10px}.info-item strong{display:block;font-family:"Bebas Neue";font-size:1.4rem;color:#fff}.info-item span{font-size:.77rem;color:#ffffff8c}
+footer{background:#111;padding:64px 0 26px}.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:44px;margin-bottom:44px}.footer-logo-wrap{width:56px;height:56px;border-radius:50%;background:#fff;border:2px solid var(--red);display:grid;place-items:center;overflow:hidden;margin-bottom:14px}.footer-logo-wrap svg{width:100%;height:100%}.footer-brand p,.footer-col a,.footer-col p{color:#777;font-size:.84rem;line-height:2.1}.footer-brand p{max-width:260px;line-height:1.8;margin-bottom:18px}.social-links{display:flex;gap:8px}.social-links a{width:36px;height:36px;border:1px solid #333;border-radius:6px;display:grid;place-items:center;color:#777}.social-links a:hover{background:var(--red);border-color:var(--red);color:#fff}.footer-col h4{font-size:.67rem;letter-spacing:2.5px;text-transform:uppercase;color:var(--red);margin-bottom:18px}.footer-col a{display:block}.footer-bottom{border-top:1px solid #222;padding-top:20px;display:flex;justify-content:space-between;gap:12px}.footer-bottom p{color:#555;font-size:.77rem}.footer-bottom span{color:var(--red)}
+.wa-float{position:fixed;right:26px;bottom:26px;z-index:90;width:56px;height:56px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;font-size:1.45rem;box-shadow:0 8px 22px #25d36659}.toast{position:fixed;left:50%;bottom:90px;z-index:500;transform:translateX(-50%) translateY(16px);opacity:0;pointer-events:none;background:var(--green);color:#fff;border-radius:8px;padding:11px 22px;font-size:.86rem;font-weight:700;display:flex;align-items:center;gap:7px;box-shadow:0 8px 22px #0003;transition:.25s}.toast.show{opacity:1;transform:translateX(-50%)}
+.sz-overlay,.pix-ov{position:fixed;inset:0;z-index:300;background:#000a;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;pointer-events:none;transition:.25s}.sz-overlay.open,.pix-ov.open{opacity:1;pointer-events:auto}.sz-modal,.pix-modal{background:#fff;border-radius:16px;width:100%;box-shadow:0 24px 60px #0005;overflow:hidden}.sz-modal{max-width:480px}.pix-modal{max-width:360px}.sz-hd,.pix-hd{background:linear-gradient(135deg,var(--red-dk),var(--red));padding:18px 22px;display:flex;justify-content:space-between;align-items:flex-start;color:#fff}.pix-hd{background:linear-gradient(135deg,var(--green-dk),var(--green));align-items:center}.sz-hd h3,.pix-hd h3{font-family:"Bebas Neue";font-size:1.45rem;letter-spacing:2px;display:flex;gap:8px}.sz-pname{display:block;font-family:"Playfair Display";font-style:italic;font-size:.9rem;color:#ffffffd9;margin-top:3px}.mod-x,.pix-close{border:0;border-radius:50%;background:#ffffff33;color:#fff;width:32px;height:32px;cursor:pointer}.sz-bd,.pix-bd{padding:22px}.size-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:18px}.sopt{border:2px solid var(--border);border-radius:10px;padding:12px 6px;text-align:center;cursor:pointer;background:#fff}.sopt:hover,.sopt.sel{border-color:var(--red);background:#c0181a0f}.sopt svg{width:38px;height:38px;margin:0 auto 5px}.sopt-ltr{display:block;font-family:"Bebas Neue";font-size:1.5rem;color:var(--red);line-height:1}.sopt-sl{display:block;font-size:.62rem;color:var(--gray)}.sopt-val{display:block;font-family:"Bebas Neue";font-size:1.2rem}.borda-sec{background:#d4a01714;border:1.5px solid #d4a0174d;border-radius:10px;padding:14px;margin-bottom:16px}.borda-title{font-size:.65rem;font-weight:900;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:10px}.borda-chips{display:flex;gap:7px;flex-wrap:wrap}.bchip{border:1.5px solid #d4a01766;background:#fff;border-radius:20px;padding:6px 13px;font-size:.76rem;font-weight:800;cursor:pointer}.bchip.sel{background:var(--gold);border-color:var(--gold);color:#111}.obs-tip{font-size:.74rem;color:var(--gray);background:#1b6b2e0f;border:1px solid #1b6b2e33;border-radius:8px;padding:9px 13px;margin-bottom:14px}.sz-prev{text-align:center;color:var(--gray);font-size:.85rem;margin-bottom:12px}.sz-prev strong{font-family:"Bebas Neue";font-size:1.35rem;color:var(--red)}.btn-add-sz{width:100%;background:var(--green);color:#fff;padding:14px;font-size:.86rem}.btn-add-sz:disabled{opacity:.45;cursor:not-allowed}
+.pix-qr{background:var(--cream);border:2px dashed var(--border);border-radius:12px;padding:18px;text-align:center;margin-bottom:18px}.pix-qr svg{width:170px;height:170px;margin:auto}.pix-qr-lbl{font-size:.68rem;color:var(--gray);text-transform:uppercase;letter-spacing:1px}.pix-key-box{background:#1b6b2e0f;border:1.5px solid #1b6b2e40;border-radius:10px;padding:13px 15px;margin-bottom:14px}.pix-key-lbl{font-size:.62rem;font-weight:900;letter-spacing:1.5px;text-transform:uppercase;color:var(--green);margin-bottom:6px}.pix-key-row{display:flex;gap:9px;align-items:center}.pix-key-val{flex:1;font-size:1rem;font-weight:800}.pix-copy{border:0;border-radius:6px;background:var(--green);color:#fff;padding:7px 13px;cursor:pointer;font-size:.72rem;font-weight:800;text-transform:uppercase}.pix-copy.done{background:#059669}.pix-note{text-align:center;color:var(--gray);font-size:.78rem;line-height:1.6}.pix-wa{width:100%;margin-top:14px;background:#25d366;color:#fff;padding:13px;font-size:.84rem}
+@media(max-width:1100px){.hero-content{grid-template-columns:1fr}.hero-right{display:none}.reviews-grid,.cart-layout{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr}.info-grid{grid-template-columns:1fr 1fr;gap:20px}.info-item{border-right:0;border-bottom:1px solid #ffffff14;padding-bottom:20px}.pay-box{position:static}.size-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:768px){.navbar{height:74px;padding:0 18px}.nav-links{display:none}.logo-circle{width:46px;height:46px}.logo-txt{font-size:1.25rem}.hero-content,.container,.info-grid{padding-left:18px;padding-right:18px}.hero h1{font-size:4rem}.hero h1 em{font-size:3.1rem}.hero-btns{flex-direction:column}.btn-primary,.btn-wa{width:100%}.menu-hd{flex-direction:column;align-items:flex-start}.menu-hd-right{text-align:left}.tabs-bar{width:100%;flex-wrap:wrap}.tab-btn{flex:1;justify-content:center;font-size:.62rem;padding:9px 5px}.pizzas-grid,.drinks-list{grid-template-columns:1fr}.sec-title{font-size:3rem}#tab-cart{padding:14px}.cart-item{flex-wrap:wrap}.citem-price{text-align:left;width:100%}.footer-grid,.info-grid{grid-template-columns:1fr}.footer-bottom{flex-direction:column}.addr-g2{grid-template-columns:1fr 85px}.receive-opts{grid-template-columns:repeat(3,1fr)}}
 </style>
 </head>
 <body>
-
-<!-- FLAG STRIPE -->
 <div class="flag-stripe"></div>
+<a class="wa-float" href="https://wa.me/5583996384531" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+<div class="toast" id="toast"><i class="fa-solid fa-check"></i><span id="toast-msg"></span></div>
 
-<!-- WHATSAPP FLOAT -->
-<a href="https://wa.me/5583996384531" target="_blank" class="wa-float" aria-label="WhatsApp">
-  <i class="fa-brands fa-whatsapp"></i>
-</a>
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" id="logo-defs">
+  <symbol id="logo-svg" viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="50" fill="#c0181a"/>
+    <circle cx="50" cy="50" r="36" fill="#f0c040"/>
+    <line x1="50" y1="14" x2="50" y2="86" stroke="#c0181a" stroke-width="2.2"/>
+    <line x1="14" y1="50" x2="86" y2="50" stroke="#c0181a" stroke-width="2.2"/>
+    <line x1="24" y1="24" x2="76" y2="76" stroke="#c0181a" stroke-width="2.2"/>
+    <line x1="76" y1="24" x2="24" y2="76" stroke="#c0181a" stroke-width="2.2"/>
+    <circle cx="50" cy="50" r="36" fill="none" stroke="#d4620a" stroke-width="5"/>
+    <circle cx="50" cy="50" r="28" fill="#c0181a" opacity="0.55"/>
+    <circle cx="50" cy="50" r="21" fill="#fff" opacity="0.85"/>
+    <circle cx="50" cy="38" r="4.5" fill="#8b0f11"/>
+    <circle cx="41" cy="56" r="4.5" fill="#8b0f11"/>
+    <circle cx="60" cy="56" r="4.5" fill="#8b0f11"/>
+    <text x="50" y="96" text-anchor="middle" font-family="'Bebas Neue', sans-serif" font-size="11" fill="#fff" letter-spacing="1">GORDO</text>
+  </symbol>
+</svg>
 
-<!-- TOAST -->
-<div class="toast" id="toast"><i class="fa-solid fa-check"></i> <span id="toast-msg">Item adicionado!</span></div>
-
-<!-- HEADER -->
 <header id="header">
   <div class="navbar">
-    <div class="logo">PIZZARIA <span>DO</span> <em>GORDO</em></div>
+    <a class="logo-wrap" href="#inicio">
+      <div class="logo-circle"><svg><use href="#logo-svg"/></svg></div>
+      <div class="logo-txt">PIZZARIA <span>DO</span><em>GORDO</em></div>
+    </a>
     <nav class="nav-links">
       <a href="#inicio">Início</a>
       <a href="#cardapio">Cardápio</a>
-      <a href="#sobre">Nossa História</a>
-      <a href="#galeria">Galeria</a>
       <a href="#contato">Contato</a>
     </nav>
-    <a href="#cardapio" onclick="openCart()" class="btn-nav">
-      <i class="fa-solid fa-cart-shopping"></i> Carrinho
-      <span class="cart-count" id="nav-cart-count">0</span>
-    </a>
+    <button class="btn-cart" onclick="openCart()"><i class="fa-solid fa-cart-shopping"></i> Carrinho <span class="cart-badge" id="nav-cart-count">0</span></button>
   </div>
 </header>
 
-<!-- HERO -->
+<main>
 <section class="hero" id="inicio">
-  <div class="hero-bg">
-    <img src="https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?q=80&w=1920&auto=format&fit=crop" alt="Pizza">
-  </div>
-  <div class="hero-flag"></div>
+  <div class="hero-bg"><img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=1920&q=80" alt="Pizza"></div>
+  <div class="hero-overlay"></div>
   <div class="hero-content">
-    <div class="hero-left">
-      <div class="hero-eyebrow"><i class="fa-solid fa-fire"></i> Massa Artesanal • Forno a Lenha</div>
-      <h1>A MELHOR
-        <em>Pizza</em>
-        DO CARIRI
-      </h1>
-      <p class="hero-desc">Ingredientes frescos, receitas tradicionais e o sabor inconfundível de quem faz com amor. Peça pelo WhatsApp e combine a entrega!</p>
-      <div class="hero-actions">
-        <a href="#cardapio" class="btn-primary">
-          Ver Cardápio <i class="fa-solid fa-arrow-right"></i>
-        </a>
-        <a href="https://wa.me/5583996384531" target="_blank" class="btn-green">
-          <i class="fa-brands fa-whatsapp"></i> WhatsApp
-        </a>
+    <div>
+      <div class="hero-eyebrow"><i class="fa-solid fa-fire"></i> Massa artesanal - Forno a lenha - Desde 2008</div>
+      <h1>A MELHOR <em>Pizza</em> DO CARIRI</h1>
+      <p class="hero-desc">Ingredientes frescos, receitas tradicionais e o sabor inconfundível de quem faz com amor desde 2008. Escolha seu tamanho e monte seu pedido.</p>
+      <div class="hero-btns">
+        <a class="btn-primary" href="#cardapio"><i class="fa-solid fa-pizza-slice"></i> Ver Cardápio</a>
+        <a class="btn-wa" href="https://wa.me/5583996384531" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
       </div>
     </div>
     <div class="hero-right">
+      <div class="hero-logo-wrap"><svg><use href="#logo-svg"/></svg></div>
       <div class="hero-stats">
-        <div class="stat-box">
-          <div class="stat-number">8+</div>
-          <div class="stat-label">Anos de tradição</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-number">30+</div>
-          <div class="stat-label">Sabores no cardápio</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-number">⭐5.0</div>
-          <div class="stat-label">Avaliação média</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-number">40min</div>
-          <div class="stat-label">Entrega média</div>
-        </div>
-      </div>
-      <div class="hero-badge">
-        <div class="badge-icon"><i class="fa-solid fa-fire-burner"></i></div>
-        <div class="badge-text">
-          <strong>Forno a Lenha Tradicional</strong>
-          <span>Temperatura perfeita para borda crocante e recheio derretendo.</span>
-        </div>
+        <div class="stat-box"><div class="stat-num">17+</div><div class="stat-lbl">Anos de tradição</div></div>
+        <div class="stat-box"><div class="stat-num">40+</div><div class="stat-lbl">Sabores</div></div>
+        <div class="stat-box"><div class="stat-num">5.0</div><div class="stat-lbl">Avaliação</div></div>
+        <div class="stat-box"><div class="stat-num">4</div><div class="stat-lbl">Tamanhos</div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CARDÁPIO -->
 <section class="menu-section" id="cardapio">
   <div class="container">
-    <div class="section-header">
+    <div class="menu-hd">
       <div>
-        <div class="section-tag">Cardápio Completo</div>
-        <h2>NOSSAS <span>ESPECIALIDADES</span></h2>
+        <div class="sec-eye">Cardápio Completo</div>
+        <h2 class="sec-title">NOSSAS <span>ESPECIALIDADES</span></h2>
       </div>
-      <p class="section-desc">Cada pizza preparada na hora com ingredientes frescos e massa artesanal.</p>
+      <p class="menu-hd-right">Clique em qualquer pizza para escolher o tamanho, borda e montar seu pedido.</p>
     </div>
-
-    <!-- TABS -->
-    <div class="tabs-wrapper">
-      <div class="tabs">
-        <button class="tab-btn active" onclick="showTab('salgadas',this)">
-          <i class="fa-solid fa-pizza-slice"></i> Salgadas
-        </button>
-        <button class="tab-btn" onclick="showTab('bebidas',this)">
-          <i class="fa-solid fa-wine-bottle"></i> Bebidas
-        </button>
-        <button class="tab-btn" onclick="showTab('combos',this)">
-          <i class="fa-solid fa-tags"></i> Combos
-        </button>
-        <button class="tab-btn green-tab" id="cart-tab-btn" onclick="showTab('carrinho',this)">
-          <i class="fa-solid fa-cart-shopping"></i> Carrinho
-          <span class="cart-badge-tab" id="tab-cart-count">0</span>
-        </button>
-      </div>
+    <div class="tabs-bar">
+      <button class="tab-btn active" data-tab="salgadas"><i class="fa-solid fa-pizza-slice"></i> Salgadas</button>
+      <button class="tab-btn tab-doce" data-tab="doces"><i class="fa-solid fa-cookie-bite"></i> Pizzas Doces</button>
+      <button class="tab-btn tab-beb" data-tab="bebidas"><i class="fa-solid fa-wine-bottle"></i> Bebidas</button>
+      <button class="tab-btn tab-cart" id="cart-tab-btn" data-tab="cart"><i class="fa-solid fa-cart-shopping"></i> Carrinho <span class="cart-dot" id="tab-cart-count">0</span></button>
     </div>
-
-    <!-- SALGADAS -->
-    <div class="tab-panel active" id="tab-salgadas">
-      <div class="items-grid">
-        <div class="item-card">
-          <div class="card-img">
-            <span class="card-badge">Mais Pedida</span>
-            <img src="https://images.unsplash.com/photo-1628840042765-356cda07504e?q=80&w=800&auto=format&fit=crop" alt="Calabresa" loading="lazy">
-          </div>
-          <div class="card-body">
-            <h3>Calabresa</h3>
-            <p>Molho artesanal, queijo mussarela, calabresa fatiada, cebola caramelizada e azeite.</p>
-          </div>
-          <div class="card-footer">
-            <div class="price"><small>a partir de</small>R$ 39,90</div>
-            <button class="btn-add" onclick="addToCart('Calabresa','https://images.unsplash.com/photo-1628840042765-356cda07504e?q=80&w=200',39.90)">
-              <i class="fa-solid fa-plus"></i> Adicionar
-            </button>
-          </div>
-        </div>
-
-        <div class="item-card">
-          <div class="card-img">
-            <img src="https://images.unsplash.com/photo-1604382355076-af4b0eb60143?q=80&w=800&auto=format&fit=crop" alt="Frango Catupiry" loading="lazy">
-          </div>
-          <div class="card-body">
-            <h3>Frango com Catupiry</h3>
-            <p>Frango desfiado temperado, catupiry original cremoso, mussarela e molho da casa.</p>
-          </div>
-          <div class="card-footer">
-            <div class="price"><small>a partir de</small>R$ 44,90</div>
-            <button class="btn-add" onclick="addToCart('Frango com Catupiry','https://images.unsplash.com/photo-1604382355076-af4b0eb60143?q=80&w=200',44.90)">
-              <i class="fa-solid fa-plus"></i> Adicionar
-            </button>
-          </div>
-        </div>
-
-        <div class="item-card">
-          <div class="card-img">
-            <img src="https://images.unsplash.com/photo-1594007654729-407eedc4be65?q=80&w=800&auto=format&fit=crop" alt="Portuguesa" loading="lazy">
-          </div>
-          <div class="card-body">
-            <h3>Portuguesa</h3>
-            <p>Presunto, ovos, cebola, pimentão, azeitonas, queijo e molho de tomate especial.</p>
-          </div>
-          <div class="card-footer">
-            <div class="price"><small>a partir de</small>R$ 42,90</div>
-            <button class="btn-add" onclick="addToCart('Portuguesa','https://images.unsplash.com/photo-1594007654729-407eedc4be65?q=80&w=200',42.90)">
-              <i class="fa-solid fa-plus"></i> Adicionar
-            </button>
-          </div>
-        </div>
-
-        <div class="item-card">
-          <div class="card-img">
-            <span class="card-badge">Premium</span>
-            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=800&auto=format&fit=crop" alt="Margherita" loading="lazy">
-          </div>
-          <div class="card-body">
-            <h3>Margherita Especial</h3>
-            <p>Molho de tomate fresco, mussarela de búfala, tomate cereja e manjericão fresco.</p>
-          </div>
-          <div class="card-footer">
-            <div class="price"><small>a partir de</small>R$ 46,90</div>
-            <button class="btn-add" onclick="addToCart('Margherita Especial','https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=200',46.90)">
-              <i class="fa-solid fa-plus"></i> Adicionar
-            </button>
-          </div>
-        </div>
-
-        <div class="item-card">
-          <div class="card-img">
-            <img src="https://images.unsplash.com/photo-1548365328-9f547fb0953b?q=80&w=800&auto=format&fit=crop" alt="Quatro Queijos" loading="lazy">
-          </div>
-          <div class="card-body">
-            <h3>Quatro Queijos</h3>
-            <p>Mussarela, catupiry, parmesão e provolone. Uma explosão de sabor a cada mordida.</p>
-          </div>
-          <div class="card-footer">
-            <div class="price"><small>a partir de</small>R$ 48,90</div>
-            <button class="btn-add" onclick="addToCart('Quatro Queijos','https://images.unsplash.com/photo-1548365328-9f547fb0953b?q=80&w=200',48.90)">
-              <i class="fa-solid fa-plus"></i> Adicionar
-            </button>
-          </div>
-        </div>
-
-        <div class="item-card">
-          <div class="card-img">
-            <span class="card-badge green">Novidade</span>
-            <img src="https://images.unsplash.com/photo-1601924582970-9238bcb495d9?q=80&w=800&auto=format&fit=crop" alt="Pepperoni" loading="lazy">
-          </div>
-          <div class="card-body">
-            <h3>Pepperoni</h3>
-            <p>Pepperoni artesanal, mussarela derretida, orégano e molho especial da casa.</p>
-          </div>
-          <div class="card-footer">
-            <div class="price"><small>a partir de</small>R$ 47,90</div>
-            <button class="btn-add" onclick="addToCart('Pepperoni','https://images.unsplash.com/photo-1601924582970-9238bcb495d9?q=80&w=200',47.90)">
-              <i class="fa-solid fa-plus"></i> Adicionar
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- BEBIDAS -->
-    <div class="tab-panel" id="tab-bebidas">
-      <div class="drinks-grid">
-        <div class="drink-card">
-          <div class="drink-img">
-            <img src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?q=80&w=600&auto=format&fit=crop" alt="Coca-Cola" loading="lazy">
-          </div>
-          <div class="drink-body">
-            <h3>Coca-Cola Lata</h3>
-            <p>350ml gelada</p>
-            <div class="drink-price">R$ 6,00</div>
-            <button class="btn-drink-add" onclick="addToCart('Coca-Cola Lata','https://images.unsplash.com/photo-1622483767028-3f66f32aef97?q=80&w=200',6.00)">+ Adicionar</button>
-          </div>
-        </div>
-        <div class="drink-card">
-          <div class="drink-img">
-            <img src="https://images.unsplash.com/photo-1551538827-9c037cb4f32a?q=80&w=600&auto=format&fit=crop" alt="Refri 2L" loading="lazy">
-          </div>
-          <div class="drink-body">
-            <h3>Refrigerante 2L</h3>
-            <p>Coca, Guaraná ou Sprite</p>
-            <div class="drink-price">R$ 12,00</div>
-            <button class="btn-drink-add" onclick="addToCart('Refrigerante 2L','https://images.unsplash.com/photo-1551538827-9c037cb4f32a?q=80&w=200',12.00)">+ Adicionar</button>
-          </div>
-        </div>
-        <div class="drink-card">
-          <div class="drink-img">
-            <img src="https://images.unsplash.com/photo-1534353436294-0dbd4bdac845?q=80&w=600&auto=format&fit=crop" alt="Suco" loading="lazy">
-          </div>
-          <div class="drink-body">
-            <h3>Suco Natural</h3>
-            <p>Laranja, Maracujá ou Limão</p>
-            <div class="drink-price">R$ 8,00</div>
-            <button class="btn-drink-add" onclick="addToCart('Suco Natural','https://images.unsplash.com/photo-1534353436294-0dbd4bdac845?q=80&w=200',8.00)">+ Adicionar</button>
-          </div>
-        </div>
-        <div class="drink-card">
-          <div class="drink-img">
-            <img src="https://images.unsplash.com/photo-1571613316887-6f8d5cbf7ef7?q=80&w=600&auto=format&fit=crop" alt="Cerveja" loading="lazy">
-          </div>
-          <div class="drink-body">
-            <h3>Cerveja Long Neck</h3>
-            <p>Heineken, Budweiser ou Brahma</p>
-            <div class="drink-price">R$ 10,00</div>
-            <button class="btn-drink-add" onclick="addToCart('Cerveja Long Neck','https://images.unsplash.com/photo-1571613316887-6f8d5cbf7ef7?q=80&w=200',10.00)">+ Adicionar</button>
-          </div>
-        </div>
-        <div class="drink-card">
-          <div class="drink-img">
-            <img src="https://images.unsplash.com/photo-1529543544282-ea669407fca3?q=80&w=600&auto=format&fit=crop" alt="Água" loading="lazy">
-          </div>
-          <div class="drink-body">
-            <h3>Água Mineral</h3>
-            <p>500ml com ou sem gás</p>
-            <div class="drink-price">R$ 4,00</div>
-            <button class="btn-drink-add" onclick="addToCart('Água Mineral','https://images.unsplash.com/photo-1529543544282-ea669407fca3?q=80&w=200',4.00)">+ Adicionar</button>
-          </div>
-        </div>
-        <div class="drink-card">
-          <div class="drink-img">
-            <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?q=80&w=600&auto=format&fit=crop" alt="Vinho" loading="lazy">
-          </div>
-          <div class="drink-body">
-            <h3>Vinho Tinto</h3>
-            <p>Taça 150ml</p>
-            <div class="drink-price">R$ 18,00</div>
-            <button class="btn-drink-add" onclick="addToCart('Vinho Tinto','https://images.unsplash.com/photo-1544145945-f90425340c7e?q=80&w=200',18.00)">+ Adicionar</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- COMBOS -->
-    <div class="tab-panel" id="tab-combos">
-      <div class="items-grid">
-        <div class="item-card">
-          <div class="card-img">
-            <span class="card-badge">Economize 20%</span>
-            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=800&auto=format&fit=crop" alt="Combo Família" loading="lazy">
-          </div>
-          <div class="card-body">
-            <h3>Combo Família</h3>
-            <p>2 Pizzas Grandes + Refrigerante 2L + 8 brotinhos de alho. Perfeito para a turma!</p>
-          </div>
-          <div class="card-footer">
-            <div class="price"><small>tudo por</small>R$ 99,90</div>
-            <button class="btn-add" onclick="addToCart('Combo Família','https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=200',99.90)">
-              <i class="fa-solid fa-plus"></i> Adicionar
-            </button>
-          </div>
-        </div>
-        <div class="item-card">
-          <div class="card-img">
-            <span class="card-badge">Mais Vendido</span>
-            <img src="https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?q=80&w=800&auto=format&fit=crop" alt="Combo Casal" loading="lazy">
-          </div>
-          <div class="card-body">
-            <h3>Combo Casal</h3>
-            <p>1 Pizza Grande + 1 Pizza Doce + 2 Refrigerantes lata. Noite perfeita em casa!</p>
-          </div>
-          <div class="card-footer">
-            <div class="price"><small>tudo por</small>R$ 79,90</div>
-            <button class="btn-add" onclick="addToCart('Combo Casal','https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?q=80&w=200',79.90)">
-              <i class="fa-solid fa-plus"></i> Adicionar
-            </button>
-          </div>
-        </div>
-        <div class="item-card">
-          <div class="card-img">
-            <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?q=80&w=800&auto=format&fit=crop" alt="Pizza + Refri" loading="lazy">
-          </div>
-          <div class="card-body">
-            <h3>Pizza Grande + Refri 2L</h3>
-            <p>Qualquer pizza grande do cardápio + Refrigerante 2L da sua escolha.</p>
-          </div>
-          <div class="card-footer">
-            <div class="price"><small>tudo por</small>R$ 59,90</div>
-            <button class="btn-add" onclick="addToCart('Combo Pizza + Refri 2L','https://images.unsplash.com/photo-1574071318508-1cdbab80d002?q=80&w=200',59.90)">
-              <i class="fa-solid fa-plus"></i> Adicionar
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- CARRINHO + PAGAMENTO -->
-    <div class="tab-panel" id="tab-carrinho">
-      <div id="cart-content"></div>
-    </div>
-
+    <div class="tab-panel active" id="tab-salgadas"><div class="pizzas-grid" id="salgadas-grid"></div></div>
+    <div class="tab-panel" id="tab-doces"><div class="pizzas-grid" id="doces-grid"></div></div>
+    <div class="tab-panel" id="tab-bebidas"><div class="drinks-wrap" id="drinks-wrap"></div></div>
+    <div class="tab-panel" id="tab-cart"><div id="cart-content"></div></div>
   </div>
 </section>
 
-<!-- PROMO BANNER -->
-<section class="promo-section">
-  <div class="container">
-    <div class="promo-banner">
-      <div>
-        <div class="promo-tag">⚡ Promoção da Noite</div>
-        <h2>PIZZA GRANDE<br>+ REFRI 2L</h2>
-        <p>Válido de segunda a quinta. Qualquer sabor do cardápio.<br>Frete a combinar com a pizzaria!</p>
-      </div>
-      <div class="promo-price-box">
-        <div class="promo-from">de R$ 71,90</div>
-        <div class="promo-to"><small>R$</small> 59</div>
-        <div class="promo-currency">,90 tudo junto</div>
-        <button class="btn-primary" style="width:100%;justify-content:center;border:none;cursor:pointer;"
-          onclick="addToCart('Combo Pizza + Refri 2L','https://images.unsplash.com/photo-1574071318508-1cdbab80d002?q=80&w=200',59.90);showTab('carrinho',document.getElementById('cart-tab-btn'))">
-          Aproveitar Agora <i class="fa-solid fa-arrow-right"></i>
-        </button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SOBRE -->
-<section class="why-section" id="sobre">
-  <div class="container">
-    <div class="why-grid">
-      <div class="why-visual">
-        <div class="why-img-main">
-          <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=800&auto=format&fit=crop" alt="Nossa pizzaria">
-        </div>
-        <div class="why-img-float">
-          <img src="https://images.unsplash.com/photo-1590947132387-155cc02f3212?q=80&w=600&auto=format&fit=crop" alt="Preparo">
-        </div>
-        <div class="why-label">
-          <span>8+</span>
-          <p>Anos de sabor</p>
-        </div>
-      </div>
-      <div class="why-content">
-        <div class="section-tag">Nossa História</div>
-        <h2>FEITO COM <span>PAIXÃO</span><br>ENTREGUE COM AMOR</h2>
-        <p>Desde 2016, a Pizzaria do Gordo é sinônimo de qualidade e tradição em Sumé. Nascemos de uma receita de família e crescemos com a confiança de cada cliente.</p>
-        <div class="features">
-          <div class="feature-item">
-            <div class="feature-icon"><i class="fa-solid fa-wheat-awn"></i></div>
-            <div class="feature-text">
-              <strong>Massa Artesanal</strong>
-              <p>Preparada diariamente, fermentada lentamente por 24h para uma textura perfeita.</p>
-            </div>
-          </div>
-          <div class="feature-item">
-            <div class="feature-icon"><i class="fa-solid fa-fire"></i></div>
-            <div class="feature-text">
-              <strong>Forno a Lenha</strong>
-              <p>A 400°C, nossa pizza assa em minutos garantindo borda crocante e recheio perfeito.</p>
-            </div>
-          </div>
-          <div class="feature-item">
-            <div class="feature-icon"><i class="fa-solid fa-truck-fast"></i></div>
-            <div class="feature-text">
-              <strong>Delivery Disponível</strong>
-              <p>Atendemos pedidos para entrega em Sumé e região. Frete a combinar direto pelo WhatsApp.</p>
-            </div>
-          </div>
-          <div class="feature-item">
-            <div class="feature-icon"><i class="fa-solid fa-leaf"></i></div>
-            <div class="feature-text">
-              <strong>Ingredientes Frescos</strong>
-              <p>Selecionados diariamente, priorizando produtores locais da região.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- GALERIA -->
-<section class="gallery-section" id="galeria">
-  <div class="container">
-    <div class="gallery-header">
-      <div class="section-tag">Galeria</div>
-      <h2>NOSSO <span>UNIVERSO</span></h2>
-    </div>
-    <div class="gallery-masonry">
-      <div class="gallery-item g1">
-        <img src="https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?q=80&w=900&auto=format&fit=crop" alt="Pizza">
-      </div>
-      <div class="gallery-item g2">
-        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=700&auto=format&fit=crop" alt="Margherita">
-      </div>
-      <div class="gallery-item g3">
-        <img src="https://images.unsplash.com/photo-1601924582970-9238bcb495d9?q=80&w=700&auto=format&fit=crop" alt="Pepperoni">
-      </div>
-      <div class="gallery-item g4">
-        <img src="https://images.unsplash.com/photo-1548365328-9f547fb0953b?q=80&w=700&auto=format&fit=crop" alt="Quatro Queijos">
-      </div>
-      <div class="gallery-item g5">
-        <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?q=80&w=700&auto=format&fit=crop" alt="Pizza no forno">
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- REVIEWS -->
 <section class="reviews-section">
   <div class="container">
-    <div class="reviews-header">
-      <div class="section-tag">Clientes Felizes</div>
-      <h2>O QUE DIZEM <span style="color:var(--red)">SOBRE NÓS</span></h2>
+    <div class="reviews-hd">
+      <div class="sec-eye">Clientes Felizes</div>
+      <h2 class="sec-title">O QUE DIZEM <span>SOBRE NÓS</span></h2>
     </div>
     <div class="reviews-grid">
-      <div class="review-card">
-        <div class="stars">★★★★★</div>
-        <p class="review-text">"A melhor pizza que já comi em Sumé. Massa perfeita, ingredientes frescos e entrega super rápida!"</p>
-        <div class="reviewer">
-          <div class="reviewer-avatar">MF</div>
-          <div><div class="reviewer-name">Maria Fernanda</div><div class="reviewer-sub">Cliente há 3 anos</div></div>
-        </div>
-      </div>
-      <div class="review-card">
-        <div class="stars">★★★★★</div>
-        <p class="review-text">"Fiz pedido para reunião de família e todo mundo amou! O Combo Família é sensacional!"</p>
-        <div class="reviewer">
-          <div class="reviewer-avatar">JS</div>
-          <div><div class="reviewer-name">João Silva</div><div class="reviewer-sub">Cliente há 2 anos</div></div>
-        </div>
-      </div>
-      <div class="review-card">
-        <div class="stars">★★★★★</div>
-        <p class="review-text">"A pizza Quatro Queijos é incrível! Chegou quentinha e na hora certa. Recomendo!"</p>
-        <div class="reviewer">
-          <div class="reviewer-avatar">AC</div>
-          <div><div class="reviewer-name">Ana Carolina</div><div class="reviewer-sub">Cliente há 1 ano</div></div>
-        </div>
-      </div>
+      <div class="review"><div class="stars">★★★★★</div><p class="review-txt">"A melhor pizza de Sumé! Massa perfeita, ingredientes frescos. Não largo mais."</p><div class="reviewer"><div class="r-av">MF</div><div><div class="r-name">Maria Fernanda</div><div class="r-sub">Cliente há 3 anos</div></div></div></div>
+      <div class="review"><div class="stars">★★★★★</div><p class="review-txt">"Pedi o tamanho família e todo mundo amou! A pizza do Gordo não tem igual no Cariri."</p><div class="reviewer"><div class="r-av">JS</div><div><div class="r-name">João Silva</div><div class="r-sub">Cliente há 2 anos</div></div></div></div>
+      <div class="review"><div class="stars">★★★★★</div><p class="review-txt">"Quatro Queijos incrível! Chegou quentinha na hora certa. Recomendo pra todo mundo!"</p><div class="reviewer"><div class="r-av">AC</div><div><div class="r-name">Ana Carolina</div><div class="r-sub">Cliente há 1 ano</div></div></div></div>
     </div>
   </div>
 </section>
+</main>
 
-<!-- INFO BAR -->
 <div class="info-bar">
   <div class="info-grid">
-    <div class="info-item">
-      <i class="fa-solid fa-clock"></i>
-      <strong>Ter–Dom: 18h–24h</strong>
-      <span>Fechamos segunda-feira</span>
-    </div>
-    <div class="info-item">
-      <i class="fa-solid fa-location-dot"></i>
-      <strong>Rua Aleixo Bezerra, 524</strong>
-      <span>Centro, Sumé – PB</span>
-    </div>
-    <div class="info-item">
-      <i class="fa-solid fa-phone"></i>
-      <strong>(83) 99638-4531</strong>
-      <span>WhatsApp e ligações</span>
-    </div>
-    <div class="info-item">
-      <i class="fa-solid fa-motorcycle"></i>
-      <strong>Delivery Disponível</strong>
-      <span>Frete a combinar com a pizzaria</span>
-    </div>
+    <div class="info-item"><i class="fa-solid fa-clock"></i><strong>Ter-Dom 18h-24h</strong><span>Fechamos segunda-feira</span></div>
+    <div class="info-item"><i class="fa-solid fa-location-dot"></i><strong>Rua Aleixo Bezerra, 524</strong><span>Centro, Sumé - PB</span></div>
+    <div class="info-item"><i class="fa-solid fa-phone"></i><strong>(83) 99638-4531</strong><span>WhatsApp e ligações</span></div>
+    <div class="info-item"><i class="fa-solid fa-motorcycle"></i><strong>Delivery Disponível</strong><span>Frete a combinar</span></div>
   </div>
 </div>
 
-<!-- FOOTER -->
 <footer id="contato">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <div class="logo">PIZZARIA <span>DO</span> <em>GORDO</em></div>
-        <p>A tradição da pizza artesanal de Sumé. Massa fresca, ingredientes selecionados e muito sabor desde 2016.</p>
+        <div class="footer-logo-wrap"><svg><use href="#logo-svg"/></svg></div>
+        <p>A tradição da pizza artesanal de Sumé. Massa fresca, ingredientes selecionados e muito sabor desde 2008.</p>
         <div class="social-links">
-          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="https://wa.me/5583996384531" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-          <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="https://www.instagram.com/pizzariadogordo_sume?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://wa.me/5583996384531" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
         </div>
       </div>
-      <div class="footer-col">
-        <h4>Cardápio</h4>
-        <a href="#cardapio" onclick="showTab('salgadas',document.querySelectorAll('.tab-btn')[0])">Pizzas Salgadas</a>
-        <a href="#cardapio" onclick="showTab('bebidas',document.querySelectorAll('.tab-btn')[1])">Bebidas</a>
-        <a href="#cardapio" onclick="showTab('combos',document.querySelectorAll('.tab-btn')[2])">Combos</a>
-        <a href="#cardapio" onclick="openCart()">Meu Carrinho</a>
-      </div>
-      <div class="footer-col">
-        <h4>Links</h4>
-        <a href="#inicio">Início</a>
-        <a href="#sobre">Nossa História</a>
-        <a href="#galeria">Galeria</a>
-        <a href="https://wa.me/5583996384531" target="_blank">Fazer Pedido</a>
-      </div>
-      <div class="footer-col">
-        <h4>Contato</h4>
-        <p><i class="fa-solid fa-phone"></i>(83) 99638-4531</p>
-        <p><i class="fa-brands fa-instagram"></i>@pizzariadogordo_sume</p>
-        <p><i class="fa-solid fa-location-dot"></i>Rua Aleixo Bezerra, 524 | Centro, Sumé - PB</p>
-        <p><i class="fa-solid fa-clock"></i>Ter–Dom: 18h às 23h</p>
-      </div>
+      <div class="footer-col"><h4>Cardápio</h4><a href="#cardapio" data-footer-tab="salgadas">Pizzas Salgadas</a><a href="#cardapio" data-footer-tab="doces">Pizzas Doces</a><a href="#cardapio" data-footer-tab="bebidas">Bebidas</a><a href="#cardapio" onclick="openCart()">Meu Carrinho</a></div>
+      <div class="footer-col"><h4>Navegação</h4><a href="#inicio">Início</a><a href="#cardapio">Cardápio</a><a href="https://wa.me/5583996384531" target="_blank">Fazer Pedido</a></div>
+      <div class="footer-col"><h4>Contato</h4><p><i class="fa-solid fa-phone"></i> (83) 99638-4531</p><p><i class="fa-brands fa-instagram"></i> @pizzariadogordo_sume</p><p><i class="fa-solid fa-location-dot"></i> Rua Aleixo Bezerra, 524 - Centro, Sumé - PB</p><p><i class="fa-solid fa-clock"></i> Ter-Dom: 18h às 24h</p></div>
     </div>
-    <div class="footer-bottom">
-      <p>© 2026 Pizzaria do Gordo — Todos os direitos reservados.</p>
-      <p>Feito com <span>♥</span> em Sumé, PB</p>
-    </div>
+    <div class="footer-bottom"><p>© 2026 Pizzaria do Gordo - Todos os direitos reservados.</p><p>Feito com <span>♥</span> em Sumé, PB</p></div>
   </div>
 </footer>
 
 <div class="flag-stripe"></div>
 
-<script>
-// ─── CARRINHO STATE ───
-let cart = [];
-let selectedPayment = '';
-let deliveryAddress = { rua: '', numero: '', bairro: '', ref: '' };
-let savedObsGlobal = '';
-let trocoValor = '';
-let trocoCustom = '';
-
-function addToCart(name, img, price){
-  const existing = cart.find(i => i.name === name);
-  if(existing){
-    existing.qty++;
-  } else {
-    cart.push({name, img, price, qty: 1});
-  }
-  updateCartUI();
-  showToast('✓ ' + name + ' adicionado!');
-}
-
-function removeFromCart(name){
-  cart = cart.filter(i => i.name !== name);
-  updateCartUI();
-  renderCartTab();
-}
-
-function changeQty(name, delta){
-  const item = cart.find(i => i.name === name);
-  if(!item) return;
-  item.qty += delta;
-  if(item.qty <= 0) removeFromCart(name);
-  else { updateCartUI(); renderCartTab(); }
-}
-
-function getTotal(){
-  return cart.reduce((s, i) => s + i.price * i.qty, 0);
-}
-
-function getTotalQty(){
-  return cart.reduce((s, i) => s + i.qty, 0);
-}
-
-function updateCartUI(){
-  const count = getTotalQty();
-  document.getElementById('nav-cart-count').textContent = count;
-  document.getElementById('tab-cart-count').textContent = count;
-  if(document.getElementById('tab-carrinho').classList.contains('active')){
-    renderCartTab();
-  }
-}
-
-function renderCartTab(){
-  const el = document.getElementById('cart-content');
-  if(cart.length === 0){
-    el.innerHTML = `
-      <div class="cart-empty">
-        <i class="fa-solid fa-cart-shopping"></i>
-        <p>Seu carrinho está vazio.<br>Adicione itens do cardápio!</p>
-        <button onclick="showTab('salgadas',document.querySelectorAll('.tab-btn')[0])" style="display:inline-flex;align-items:center;gap:8px;background:var(--red);color:white;padding:12px 24px;border-radius:4px;font-size:.8rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer;border:none;margin-top:20px;">
-          <i class="fa-solid fa-pizza-slice"></i> Ver Cardápio
-        </button>
-      </div>`;
-    return;
-  }
-
-  const itemsHTML = cart.map(item => `
-    <div class="cart-item">
-      <div class="cart-item-img">
-        <img src="${item.img}" alt="${item.name}" style="width:100%;height:100%;object-fit:cover;">
-      </div>
-      <div class="cart-item-info">
-        <strong>${item.name}</strong>
-        <span>R$ ${item.price.toFixed(2).replace('.',',')} un.</span>
-        <div class="cart-qty">
-          <button class="qty-btn" onclick="changeQty('${item.name}',-1)">−</button>
-          <span class="qty-num">${item.qty}</span>
-          <button class="qty-btn" onclick="changeQty('${item.name}',1)">+</button>
-          <button class="qty-btn remove-btn" onclick="removeFromCart('${item.name}')" title="Remover">
-            <i class="fa-solid fa-trash" style="font-size:.65rem;"></i>
-          </button>
-        </div>
-      </div>
-      <div class="cart-item-price">R$ ${(item.price*item.qty).toFixed(2).replace('.',',')}</div>
+<!-- Modal tamanho -->
+<div class="sz-overlay" id="sz-overlay">
+  <div class="sz-modal">
+    <div class="sz-hd">
+      <div><h3><i class="fa-solid fa-pizza-slice"></i> Escolha o Tamanho</h3><span class="sz-pname" id="sz-pname"></span></div>
+      <button class="mod-x" onclick="closeSzModal()"><i class="fa-solid fa-xmark"></i></button>
     </div>
-  `).join('');
-
-  const savedObs = document.getElementById('obs-input')?.value ?? savedObsGlobal;
-  const total = getTotal();
-  const frete = 0;
-  const totalFinal = total + frete;
-
-  const payMethods = [
-    {id:'dinheiro', icon:'fa-solid fa-money-bill-wave', label:'Dinheiro'},
-    {id:'pix',      icon:'fa-brands fa-pix',           label:'Pix'},
-    {id:'debito',   icon:'fa-solid fa-credit-card',    label:'Débito'},
-    {id:'credito',  icon:'fa-regular fa-credit-card',  label:'Crédito'},
-  ];
-
-  const payHTML = payMethods.map(m => `
-    <div class="pay-option ${selectedPayment===m.id?'selected':''}"
-      onclick="selectPayment('${m.id}')">
-      <i class="${m.icon}"></i>
-      <span>${m.label}</span>
-    </div>
-  `).join('');
-
-  const confirmDisabled = (!selectedPayment || !deliveryAddress.rua || !deliveryAddress.numero || !deliveryAddress.bairro) ? 'disabled' : '';
-  const confirmHint = !selectedPayment
-    ? 'Escolha a forma de pagamento acima'
-    : (!deliveryAddress.rua || !deliveryAddress.numero || !deliveryAddress.bairro)
-      ? 'Preencha o endereço de entrega'
-      : 'Pedido será enviado via WhatsApp';
-
-  el.innerHTML = `
-    <div class="cart-layout">
-      <div class="cart-items-col">
-        <h3><i class="fa-solid fa-receipt" style="color:var(--red);font-size:1.4rem;"></i> Seu Pedido <span>${getTotalQty()}</span></h3>
-        ${itemsHTML}
-        <button onclick="cart=[];updateCartUI();renderCartTab();"
-          style="margin-top:8px;background:transparent;border:1px solid var(--border-light);
-          color:var(--warm-gray);padding:8px 16px;border-radius:4px;cursor:pointer;
-          font-size:.75rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;transition:.2s;"
-          onmouseover="this.style.borderColor='var(--red)';this.style.color='var(--red)'"
-          onmouseout="this.style.borderColor='var(--border-light)';this.style.color='var(--warm-gray)'">
-          <i class="fa-solid fa-trash-can"></i> Limpar carrinho
-        </button>
+    <div class="sz-bd">
+      <div class="size-grid" id="size-grid"></div>
+      <div class="borda-sec">
+        <div class="borda-title"><i class="fa-solid fa-circle-plus"></i> Borda Recheada (+R$ 5,00)</div>
+        <div class="borda-chips" id="borda-chips"></div>
       </div>
-
-      <div class="payment-col">
-        <div class="payment-header">
-          <i class="fa-solid fa-lock"></i>
-          <h4>Pagamento</h4>
-        </div>
-        <div class="payment-body">
-          <div class="order-summary">
-            <div class="summary-row"><span>Subtotal</span><span>R$ ${total.toFixed(2).replace('.',',')}</span></div>
-            <div class="summary-row"><span>Entrega</span><span style="color:var(--warm-gray);font-style:italic;">A combinar</span></div>
-            <div class="summary-row total">
-              <span>Total</span>
-              <span class="val">R$ ${totalFinal.toFixed(2).replace('.',',')}</span>
-            </div>
-          </div>
-
-          <!-- ENDEREÇO -->
-          <div class="address-block">
-            <div class="address-block-header">
-              <i class="fa-solid fa-location-dot"></i> Endereço de entrega
-            </div>
-            <div class="addr-grid">
-              <div>
-                <label class="addr-label">Rua / Av. <span class="addr-required">*</span></label>
-                <input class="addr-input" type="text" id="addr-rua" placeholder="Ex: Rua das Flores"
-                  value="${deliveryAddress.rua}"
-                  oninput="deliveryAddress.rua=this.value;syncConfirm()">
-              </div>
-              <div>
-                <label class="addr-label">Número <span class="addr-required">*</span></label>
-                <input class="addr-input" type="text" id="addr-num" placeholder="Ex: 42"
-                  value="${deliveryAddress.numero}"
-                  oninput="deliveryAddress.numero=this.value;syncConfirm()">
-              </div>
-            </div>
-            <div style="margin-bottom:8px;">
-              <label class="addr-label">Bairro <span class="addr-required">*</span></label>
-              <input class="addr-input" type="text" id="addr-bairro" placeholder="Ex: Centro"
-                value="${deliveryAddress.bairro}"
-                oninput="deliveryAddress.bairro=this.value;syncConfirm()">
-            </div>
-            <div>
-              <label class="addr-label">Ponto de referência</label>
-              <input class="addr-input" type="text" id="addr-ref" placeholder="Ex: próximo ao mercado"
-                value="${deliveryAddress.ref}"
-                oninput="deliveryAddress.ref=this.value">
-            </div>
-          </div>
-
-          <span class="pay-label">Forma de pagamento</span>
-          <div class="pay-methods">${payHTML}</div>
-
-          ${selectedPayment === 'dinheiro' ? `
-          <div class="troco-block">
-            <div class="troco-label-top"><i class="fa-solid fa-coins"></i> Precisa de troco?</div>
-            <div class="troco-options">
-              <div class="troco-chip ${trocoValor==='nao'?'active':''}" onclick="setTroco('nao')">Não preciso</div>
-              <div class="troco-chip ${trocoValor==='50'?'active':''}" onclick="setTroco('50')">R$ 50</div>
-              <div class="troco-chip ${trocoValor==='100'?'active':''}" onclick="setTroco('100')">R$ 100</div>
-              <div class="troco-chip ${trocoValor==='outro'?'active':''}" onclick="setTroco('outro')">Outro</div>
-            </div>
-            ${trocoValor === 'outro' ? `
-            <div class="troco-input-wrap">
-              <span class="troco-prefix">R$</span>
-              <input class="troco-input" type="number" inputmode="numeric" id="troco-custom"
-                placeholder="Valor que vai pagar"
-                value="${trocoCustom}"
-                oninput="trocoCustom=this.value">
-            </div>` : ''}
-          </div>` : ''}
-
-          <span class="obs-label" style="margin-top:14px;">Observações (opcional)</span>
-          <textarea id="obs-input" class="obs-input" rows="2" placeholder="Ex: sem cebola..." oninput="savedObsGlobal=this.value">${savedObs}</textarea>
-
-          <button class="btn-confirm" id="btn-confirm-pedido" ${confirmDisabled} onclick="confirmarPedido()">
-            <i class="fa-brands fa-whatsapp" style="font-size:1.2rem;"></i>
-            Confirmar Pedido
-          </button>
-          <p class="pay-note" id="confirm-hint"><i class="fa-solid fa-circle-info"></i> ${confirmHint}</p>
-        </div>
-      </div>
-    </div>
-  `;
-}
-
-function setTroco(val){
-  trocoValor = val;
-  if(val !== 'outro') trocoCustom = '';
-  renderCartTab();
-}
-
-function selectPayment(id){
-  selectedPayment = id;
-  if(id !== 'dinheiro'){ trocoValor = ''; trocoCustom = ''; }
-  const obsEl = document.getElementById('obs-input');
-  if(obsEl) savedObsGlobal = obsEl.value;
-  renderCartTab();
-}
-
-function syncConfirm(){
-  const btn = document.getElementById('btn-confirm-pedido');
-  const hint = document.getElementById('confirm-hint');
-  if(!btn) return;
-  const ok = selectedPayment && deliveryAddress.rua && deliveryAddress.numero && deliveryAddress.bairro;
-  btn.disabled = !ok;
-  if(hint){
-    if(!selectedPayment) hint.innerHTML = '<i class="fa-solid fa-circle-info"></i> Escolha a forma de pagamento acima';
-    else if(!deliveryAddress.rua || !deliveryAddress.numero || !deliveryAddress.bairro)
-      hint.innerHTML = '<i class="fa-solid fa-circle-info"></i> Preencha o endereço de entrega';
-    else hint.innerHTML = '<i class="fa-solid fa-circle-info"></i> Pedido será enviado via WhatsApp';
-  }
-}
-
-function confirmarPedido(){
-  if(!selectedPayment || cart.length===0) return;
-  if(!deliveryAddress.rua || !deliveryAddress.numero || !deliveryAddress.bairro) return;
-
-  // Pix → abre modal primeiro
-  if(selectedPayment === 'pix'){
-    openPixModal();
-    return;
-  }
-  enviarWhatsApp();
-}
-
-function enviarWhatsApp(){
-  if(!selectedPayment || cart.length===0) return;
-  const obs = document.getElementById('obs-input')?.value ?? savedObsGlobal;
-  const payLabels = {dinheiro:'Dinheiro',pix:'Pix',debito:'Cartão Débito',credito:'Cartão Crédito'};
-  const total = getTotal();
-
-  let enderecoFmt = `${deliveryAddress.rua}, ${deliveryAddress.numero} — ${deliveryAddress.bairro}, Sumé - PB`;
-  if(deliveryAddress.ref.trim()) enderecoFmt += ` (Ref: ${deliveryAddress.ref.trim()})`;
-
-  let msg = '🍕 *NOVO PEDIDO — Pizzaria do Gordo*\n\n';
-  msg += '*Itens:*\n';
-  cart.forEach(i => {
-    msg += `• ${i.qty}x ${i.name} — R$ ${(i.price*i.qty).toFixed(2).replace('.',',')}\n`;
-  });
-  msg += `\n*Total:* R$ ${total.toFixed(2).replace('.',',')}`;
-  msg += `\n*Entrega:* A combinar com a pizzaria`;
-  msg += `\n*Pagamento:* ${payLabels[selectedPayment]}`;
-  if(selectedPayment === 'dinheiro'){
-    if(trocoValor === 'nao') msg += `\n*Troco:* Não precisa`;
-    else if(trocoValor === '50') msg += `\n*Troco:* Para R$ 50,00`;
-    else if(trocoValor === '100') msg += `\n*Troco:* Para R$ 100,00`;
-    else if(trocoValor === 'outro' && trocoCustom) msg += `\n*Troco:* Para R$ ${parseFloat(trocoCustom).toFixed(2).replace('.',',')}`;
-  }
-  msg += `\n*Endereço:* ${enderecoFmt}`;
-  if(obs.trim()) msg += `\n*Obs:* ${obs.trim()}`;
-
-  const url = `https://wa.me/5583996384531?text=${encodeURIComponent(msg)}`;
-  window.open(url,'_blank');
-}
-
-function openCart(){
-  const btn = document.getElementById('cart-tab-btn');
-  showTab('carrinho', btn);
-  document.getElementById('cardapio').scrollIntoView({behavior:'smooth'});
-}
-
-// ─── TABS ───
-function showTab(tabId, btn){
-  document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
-  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
-  const panel = document.getElementById('tab-'+tabId);
-  if(panel) panel.classList.add('active');
-  if(btn) btn.classList.add('active');
-  if(tabId==='carrinho') renderCartTab();
-}
-
-// ─── TOAST ───
-let toastTimer;
-function showToast(msg){
-  const toast = document.getElementById('toast');
-  document.getElementById('toast-msg').textContent = msg;
-  toast.classList.add('show');
-  clearTimeout(toastTimer);
-  toastTimer = setTimeout(()=>toast.classList.remove('show'),2500);
-}
-
-// ─── SCROLL HEADER ───
-window.addEventListener('scroll',()=>{
-  document.getElementById('header').style.boxShadow =
-    window.scrollY>60 ? '0 4px 24px rgba(0,0,0,.12)' : '0 2px 20px rgba(0,0,0,.08)';
-});
-
-// ─── FADE IN OBSERVER ───
-const observer = new IntersectionObserver((entries)=>{
-  entries.forEach(e=>{
-    if(e.isIntersecting){
-      e.target.style.opacity='1';
-      e.target.style.transform='translateY(0)';
-    }
-  });
-},{threshold:0.08});
-
-document.querySelectorAll('.item-card,.drink-card,.feature-item,.review-card').forEach(el=>{
-  el.style.opacity='0';
-  el.style.transform='translateY(28px)';
-  el.style.transition='opacity .55s ease, transform .55s ease';
-  observer.observe(el);
-});
-
-// ─── PIX MODAL ───
-const PIX_CHAVE = '83996384531';
-
-function openPixModal(){
-  document.getElementById('pix-modal-overlay').classList.add('open');
-  document.body.style.overflow='hidden';
-}
-function closePixModal(){
-  document.getElementById('pix-modal-overlay').classList.remove('open');
-  document.body.style.overflow='';
-}
-
-function copyPixKey(){
-  navigator.clipboard.writeText(PIX_CHAVE).then(()=>{
-    const btn = document.getElementById('pix-copy-btn');
-    btn.classList.add('copied');
-    btn.innerHTML = '<i class="fa-solid fa-check"></i> Copiado!';
-    setTimeout(()=>{
-      btn.classList.remove('copied');
-      btn.innerHTML = '<i class="fa-regular fa-copy"></i> Copiar';
-    }, 2500);
-  }).catch(()=>{
-    // fallback para Safari antigo
-    const ta = document.createElement('textarea');
-    ta.value = PIX_CHAVE;
-    ta.style.position='fixed';ta.style.opacity='0';
-    document.body.appendChild(ta);
-    ta.focus();ta.select();
-    document.execCommand('copy');
-    document.body.removeChild(ta);
-    const btn = document.getElementById('pix-copy-btn');
-    btn.classList.add('copied');
-    btn.innerHTML = '<i class="fa-solid fa-check"></i> Copiado!';
-    setTimeout(()=>{
-      btn.classList.remove('copied');
-      btn.innerHTML = '<i class="fa-regular fa-copy"></i> Copiar';
-    }, 2500);
-  });
-}
-
-// Fechar modal clicando fora
-document.getElementById('pix-modal-overlay').addEventListener('click', function(e){
-  if(e.target === this) closePixModal();
-});
-</script>
-
-<!-- PIX MODAL -->
-<div class="pix-modal-overlay" id="pix-modal-overlay">
-  <div class="pix-modal">
-    <div class="pix-modal-header">
-      <h3><i class="fa-brands fa-pix"></i> Pagar com Pix</h3>
-      <button class="pix-modal-close" onclick="closePixModal()"><i class="fa-solid fa-xmark"></i></button>
-    </div>
-    <div class="pix-modal-body">
-
-      <div class="pix-qr-wrap">
-        <!-- QR Code fictício — substitua pela imagem real gerada pelo seu banco -->
-        <svg class="pix-qr-img" viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg" style="background:white;padding:8px;border-radius:8px;">
-          <!-- Canto TL -->
-          <rect x="10" y="10" width="50" height="50" rx="4" fill="none" stroke="#111" stroke-width="5"/>
-          <rect x="20" y="20" width="30" height="30" rx="2" fill="#111"/>
-          <!-- Canto TR -->
-          <rect x="120" y="10" width="50" height="50" rx="4" fill="none" stroke="#111" stroke-width="5"/>
-          <rect x="130" y="20" width="30" height="30" rx="2" fill="#111"/>
-          <!-- Canto BL -->
-          <rect x="10" y="120" width="50" height="50" rx="4" fill="none" stroke="#111" stroke-width="5"/>
-          <rect x="20" y="130" width="30" height="30" rx="2" fill="#111"/>
-          <!-- Módulos centrais fictícios -->
-          <rect x="75" y="10" width="8" height="8" fill="#111"/>
-          <rect x="87" y="10" width="8" height="8" fill="#111"/>
-          <rect x="75" y="22" width="8" height="8" fill="#111"/>
-          <rect x="99" y="22" width="8" height="8" fill="#111"/>
-          <rect x="75" y="34" width="20" height="8" fill="#111"/>
-          <rect x="75" y="46" width="8" height="8" fill="#111"/>
-          <rect x="87" y="46" width="8" height="8" fill="#111"/>
-          <rect x="99" y="10" width="8" height="8" fill="#111"/>
-          <!-- Centro -->
-          <rect x="75" y="75" width="30" height="8" fill="#111"/>
-          <rect x="75" y="87" width="8" height="8" fill="#111"/>
-          <rect x="97" y="87" width="8" height="8" fill="#111"/>
-          <rect x="75" y="99" width="8" height="8" fill="#111"/>
-          <rect x="87" y="99" width="8" height="8" fill="#111"/>
-          <rect x="99" y="75" width="8" height="30" fill="#111"/>
-          <!-- Bottom right módulos -->
-          <rect x="120" y="75" width="8" height="8" fill="#111"/>
-          <rect x="132" y="75" width="8" height="8" fill="#111"/>
-          <rect x="144" y="75" width="8" height="8" fill="#111"/>
-          <rect x="156" y="75" width="8" height="8" fill="#111"/>
-          <rect x="120" y="87" width="8" height="8" fill="#111"/>
-          <rect x="144" y="87" width="20" height="8" fill="#111"/>
-          <rect x="120" y="99" width="20" height="8" fill="#111"/>
-          <rect x="144" y="99" width="8" height="8" fill="#111"/>
-          <rect x="120" y="111" width="8" height="8" fill="#111"/>
-          <rect x="132" y="111" width="8" height="8" fill="#111"/>
-          <rect x="156" y="111" width="8" height="8" fill="#111"/>
-          <!-- extra bottom -->
-          <rect x="10" y="75" width="8" height="8" fill="#111"/>
-          <rect x="22" y="75" width="8" height="8" fill="#111"/>
-          <rect x="34" y="75" width="8" height="8" fill="#111"/>
-          <rect x="46" y="75" width="8" height="8" fill="#111"/>
-          <rect x="58" y="75" width="8" height="8" fill="#111"/>
-          <rect x="10" y="87" width="20" height="8" fill="#111"/>
-          <rect x="46" y="87" width="8" height="8" fill="#111"/>
-          <rect x="10" y="99" width="8" height="8" fill="#111"/>
-          <rect x="34" y="99" width="20" height="8" fill="#111"/>
-          <rect x="58" y="99" width="8" height="8" fill="#111"/>
-          <rect x="10" y="111" width="8" height="8" fill="#111"/>
-          <rect x="22" y="111" width="8" height="8" fill="#111"/>
-          <rect x="46" y="111" width="8" height="8" fill="#111"/>
-          <rect x="58" y="111" width="8" height="8" fill="#111"/>
-          <!-- Logo Pix no centro -->
-          <rect x="82" y="82" width="16" height="16" rx="3" fill="white" stroke="#1A7A2E" stroke-width="2"/>
-          <text x="90" y="93" font-size="8" text-anchor="middle" fill="#1A7A2E" font-weight="bold">₱</text>
-        </svg>
-        <div class="pix-qr-label">⚠️ QR Code fictício — substitua pela imagem real do seu banco</div>
-      </div>
-
-      <div class="pix-key-wrap">
-        <div class="pix-key-label">Chave Pix (Telefone)</div>
-        <div class="pix-key-row">
-          <span class="pix-key-value">(83) 99638-4531</span>
-          <button class="pix-copy-btn" id="pix-copy-btn" onclick="copyPixKey()">
-            <i class="fa-regular fa-copy"></i> Copiar
-          </button>
-        </div>
-      </div>
-
-      <p class="pix-note">
-        Após o pagamento, envie o <strong>comprovante pelo WhatsApp</strong> para confirmar seu pedido.
-      </p>
-
-      <button class="pix-after-btn" onclick="closePixModal();enviarWhatsApp();">
-        <i class="fa-brands fa-whatsapp"></i> Já paguei — Enviar pedido
-      </button>
-
+      <div class="obs-tip"><i class="fa-solid fa-circle-info" style="color:var(--green)"></i> Cream Cheese em qualquer sabor: +R$ 5,00 - informe nas observações.</div>
+      <div class="sz-prev" id="sz-prev">Selecione um tamanho acima</div>
+      <button class="btn-add-sz" id="btn-add-sz" onclick="confirmSz()" disabled><i class="fa-solid fa-cart-plus"></i> Adicionar ao Carrinho</button>
     </div>
   </div>
 </div>
 
+<!-- Modal Pix -->
+<div class="pix-ov" id="pix-ov">
+  <div class="pix-modal">
+    <div class="pix-hd"><h3><i class="fa-brands fa-pix"></i> Pagar com Pix</h3><button class="pix-close" onclick="closePixModal()"><i class="fa-solid fa-xmark"></i></button></div>
+    <div class="pix-bd">
+      <div class="pix-qr">
+        <svg viewBox="0 0 180 180" style="background:white;padding:8px;border-radius:8px">
+          <rect x="10" y="10" width="50" height="50" rx="4" fill="none" stroke="#111" stroke-width="5"/><rect x="20" y="20" width="30" height="30" rx="2" fill="#111"/>
+          <rect x="120" y="10" width="50" height="50" rx="4" fill="none" stroke="#111" stroke-width="5"/><rect x="130" y="20" width="30" height="30" rx="2" fill="#111"/>
+          <rect x="10" y="120" width="50" height="50" rx="4" fill="none" stroke="#111" stroke-width="5"/><rect x="20" y="130" width="30" height="30" rx="2" fill="#111"/>
+          <rect x="75" y="10" width="8" height="8" fill="#111"/><rect x="87" y="10" width="8" height="8" fill="#111"/><rect x="75" y="22" width="8" height="8" fill="#111"/><rect x="99" y="22" width="8" height="8" fill="#111"/><rect x="75" y="34" width="20" height="8" fill="#111"/><rect x="99" y="10" width="8" height="8" fill="#111"/><rect x="75" y="75" width="30" height="8" fill="#111"/><rect x="75" y="87" width="8" height="8" fill="#111"/><rect x="97" y="87" width="8" height="8" fill="#111"/><rect x="99" y="75" width="8" height="30" fill="#111"/>
+        </svg>
+        <div class="pix-qr-lbl">QR ilustrativo - substitua pelo real do banco</div>
+      </div>
+      <div class="pix-key-box">
+        <div class="pix-key-lbl">Chave Pix - Telefone</div>
+        <div class="pix-key-row"><span class="pix-key-val">(83) 99638-4531</span><button class="pix-copy" id="pix-copy-btn" onclick="copyPix()"><i class="fa-regular fa-copy"></i> Copiar</button></div>
+      </div>
+      <p class="pix-note">Após pagar, envie o <strong>comprovante pelo WhatsApp</strong> para confirmar.</p>
+      <button class="pix-wa" onclick="closePixModal();sendWA()"><i class="fa-brands fa-whatsapp"></i> Já paguei - Enviar pedido</button>
+    </div>
+  </div>
+</div>
+
+<script>
+"use strict";
+const WA_NUMBER="5583996384531",PIX_KEY="83996384531";
+const pizzaImages={
+  "Americana Especial":"https://img.magnific.com/vetores-premium/icone-de-fast-food-de-pizza-deliciosa-imagem-centrada-em-angulo-amplo_1323048-102025.jpg?semt=ais_hybrid&w=740&q=80",
+  "A Grega":"https://images.unsplash.com/photo-1700760934249-93efbb574d23?w=600&auto=format&fit=crop&q=60",
+  "A Moda do Pizzaiolo":"https://media.istockphoto.com/id/1305396905/pt/foto/pizza.jpg?s=612x612&w=0&k=20&c=PrC_AvM3BF_NOFRR3t6RqKUT9LkKSItdHCwwrWDq2VQ=",
+  "Atum":"https://media.istockphoto.com/id/1992330667/pt/foto/fish-pizza-with-tomato-sauce-canned-tuna-mozzarella-cheese-and-red-onion-close-up-on-a-wooden.webp?a=1&b=1&s=612x612&w=0&k=20&c=SzlwKFdqEdXnrscidPI0yuMJoNfs2brFaLONwt33goY=",
+  "Atum Especial":"https://images.unsplash.com/photo-1672856399643-47ddf6b2d6d6?w=600&auto=format&fit=crop&q=60",
+  "Bacon":"https://media.istockphoto.com/id/1351340378/pt/foto/pizza.webp?a=1&b=1&s=612x612&w=0&k=20&c=KTx82XWSSsz0j69WL-4MbGGWgptRoaeOnB8fl_K9GuM=",
+  "Baiana":"https://media.istockphoto.com/id/2167548692/pt/foto/hot-pizza-roll-with-tomatoes-cheese-italian-sausages-and-basil-close-up-in-baking-dish.jpg?s=612x612&w=0&k=20&c=XFNVb91219ycjm_oaAB1eJrPKULLlDzmlRPh5k2GESM=",
+  "Bauru":"https://images.unsplash.com/photo-1594007654729-407eedc4be65?w=600&q=80",
+  "Brócolis":"https://media.istockphoto.com/id/1240644156/pt/foto/delicious-broccoli-pizza-served-on-wooden-board-baked-with-mozzarella-broccoli-corn-peas.jpg?s=612x612&w=0&k=20&c=KylJSFlYyM0z2pvYuhGuN03O-tZyTFLktkU9sg11Pxk=",
+  "Caipira":"https://media.istockphoto.com/id/2211954698/pt/foto/pizza-with-mozzarella-cheese-chicken-and-corn-on-a-white-background.jpg?s=612x612&w=0&k=20&c=pPjk49iKaMd_PqEjdTjNUvi1R5aONHafW2P8t_N1CA4=",
+  "Calabresa":"https://images.unsplash.com/photo-1628840042765-356cda07504e?w=600&q=80",
+  "Calabresa Especial":"https://media.istockphoto.com/id/874333208/pt/foto/calabrian-pizza.jpg?s=612x612&w=0&k=20&c=xKY_MPFQ9bn9pxfOVN5mtobFnFdLNvvs59OxuBmsIPY=",
+  "Camarão":"https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=80",
+  "Peperonni":"https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?w=600&q=80",
+  "Carne Seca":"https://media.istockphoto.com/id/1496436867/pt/foto/sun-dried-meat-pizza-beef-jerky.jpg?s=612x612&w=0&k=20&c=3vAlAXzQ0FDTGbEXtgTDEjRMuXYhZD8dxX-yiQEJ8-Q=",
+  "Dois Queijos":"https://media.istockphoto.com/id/1363507900/pt/foto/four-cheese-pizza-brazilian-pizza.jpg?s=612x612&w=0&k=20&c=w2pFF8TGPKHlNIVmhqmK3Li1reqIIjXTcY8tqPY-Ri8=",
+  "Frango Catupiry":"https://media.istockphoto.com/id/1255499562/pt/foto/chicken-pizza-with-catupiry-cheese-in-brazil-it-is-called-chicken-pizza-with-catupiry.jpg?s=612x612&w=0&k=20&c=nLG17ct7SU0vltDRo1eRBf8jAnqO-ao3DBKcE_58FSI=",
+  "Frango com Mussarela":"https://media.istockphoto.com/id/2224949557/pt/foto/whole-cheese-pizza-with-grilled-chicken-unsliced.jpg?s=612x612&w=0&k=20&c=75POwmOszlu8Q01RTo2vB3dQiRXn_YGTnswwvjABhNk=",
+  "Lombo":"https://media.istockphoto.com/id/518397424/pt/foto/pizza-grande.jpg?s=612x612&w=0&k=20&c=upA-KMbua1kSFa4nyqNN-fynMIHa9P1kLZYpOi4bo68=",
+  "Lombo Especial":"https://media.istockphoto.com/id/874346106/pt/foto/smoked-sirloin-pizza-with-cream-cheese-and-tomato.jpg?s=612x612&w=0&k=20&c=b-iRLE22JjIxiBJZVhB9CB9Rh1QLV55Oorm0HJaCHxE=",
+  "Marguerita":"https://media.istockphoto.com/id/1363507816/pt/foto/margherita-pizza-pizza-margarita-with-tomato-basil-garlic-chips-and-mozzarella-cheese.jpg?s=612x612&w=0&k=20&c=5byOJj-sH_N4gKqR0Q36RHGhBeRiq2Ko33G9f_tZTbc=",
+  "Milho":"https://media.istockphoto.com/id/2192343203/pt/foto/a-slice-of-pizza-with-cheese-and-corn-on-it.jpg?s=612x612&w=0&k=20&c=x6iCuXsL8UMzcY8QDVByQ0wHBX8vTCkeMh2alOotwU4=",
+  "Mista":"https://media.istockphoto.com/id/1356163440/pt/foto/delicious-prosciutto-italian-pizza-on-a-marble-surface.jpg?s=612x612&w=0&k=20&c=tb9n4sEgYMb6gyW_OPNGGSU5e8e1tc43pUmuCQPGO_g=",
+  "Mineira":"https://media.istockphoto.com/id/1139749137/pt/foto/cheese-and-chicken-pizza.jpg?s=612x612&w=0&k=20&c=18cT0lgxlD0A8lKaZLDgkViKaLVXgdBr2BrB9s7Lvw0=",
+  "Mussarela":"https://media.istockphoto.com/id/1168754685/pt/foto/pizza-margarita-with-cheese-top-view-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=zOBq4jmDcRY9zauo-sfrBwOPbcTJhnFgavKq5CXmLCo=",
+  "Napolitana":"https://media.istockphoto.com/id/1295797149/pt/foto/neapolitan-pizza-on-black-background.jpg?s=612x612&w=0&k=20&c=EHKtWxyVS8SKAAOmO9aEGlk2H5k0H4djfnEYRKQE0aU=",
+  "Palmito":"https://media.istockphoto.com/id/1286514395/pt/foto/palm-heart-and-cream-cheese-pizza-top-view-on-wood-background-close-up-traditional-brazilian.jpg?s=612x612&w=0&k=20&c=ClUmpYshEBxTh5_3PUTcjvwY2VT6Y-CQP_P-a0wyh7M=",
+  "Palheta":"https://media.istockphoto.com/id/1307252544/pt/foto/brazilian-pizzas.jpg?s=612x612&w=0&k=20&c=txtvazLgOnqD8ClkAe9VZQ8FrStJHn6peCcpBWTz09o=",
+  "Paulista":"https://media.istockphoto.com/id/1240477621/pt/foto/paulista-flavored-pizza-on-wooden-board-made-with-pasta-sliced-tomatoes-mozzarella-cheese.jpg?s=612x612&w=0&k=20&c=SBItY9mxaczbkXUKED3VmsHqN8ogXlahwf-G2Wnmxn8=",
+  "Portuguesa":"https://media.istockphoto.com/id/1363507889/pt/foto/slice-of-portuguese-pizza-portuguese-pizza-is-a-brazilian-pizza-made-from-onion-pepperoni-egg.jpg?s=612x612&w=0&k=20&c=U5_zUoGFASSeFkpckC3cs47tYT_nMWVY-YTEm_bRrYQ=",
+  "Presunto":"https://media.istockphoto.com/id/1192287215/pt/foto/delicious-pizza-with-meat-on-white.jpg?s=612x612&w=0&k=20&c=YduSKGOJZGsb1WttOA6j1Z_m-wVGFEUmyvo5DtfCSbg=",
+  "Quatro Queijos":"https://media.istockphoto.com/id/1744442094/pt/foto/pizza-quattro-fromaggi-on-a-wooden-board-four-cheese-pizza-or-quattro-formaggi-pizza-topped.jpg?s=612x612&w=0&k=20&c=y8AOyIYRC_TjfLBQ5khwKwAmMFYk_daoiS4kCM5dDRY=",
+  "Século XXI":"https://media.istockphoto.com/id/496571982/pt/foto/pizza-servido-no-prato-de-madeira-isolado-no-branco.jpg?s=612x612&w=0&k=20&c=2EKqq2s8OmE5eQUFATSFw57dkljJVpZmLYmoJ1mcmDg=",
+  "Toscana":"https://images.unsplash.com/photo-1716237389458-be18cf75fafe?w=600&auto=format&fit=crop&q=60",
+  "Viena":"https://media.istockphoto.com/id/1285640757/pt/foto/delicious-portuguese-pizza-made-with-ham-pea-egg-heart-of-palm-pepperoni-onion-and-mozzarella.jpg?s=612x612&w=0&k=20&c=cCS9u6_lceuel3TPxTgz6_UZWYKFStzzEgt6n03zmvc=",
+  "Vegetariana":"https://images.unsplash.com/photo-1511689660979-10d2b1aada49?w=600&q=80",
+  "Veneza":"https://images.unsplash.com/photo-1576458088443-04a19bb13da6?w=600&auto=format&fit=crop&q=60",
+  "Você Decide":"https://media.istockphoto.com/id/1175458935/pt/foto/afro-american-man-with-dreadlocks-eating-slice-of-pizza-over-isolated-yellow-background.webp?a=1&b=1&s=612x612&w=0&k=20&c=iIvviPtHtVF9do3tBTG9fMO-lGrQqu3vBUBJSnBl5yQ=",
+  "Salame":"https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?w=600&q=80",
+  "Premium":"https://media.istockphoto.com/id/1139751219/pt/foto/pizza-with-corn-bacon-chili-onion-pea.jpg?s=612x612&w=0&k=20&c=dqeLX12K9-Qs9T8V9ZgJ-zn9rs4QWKZznrpQvTVqxpY=",
+  "Abacaxi":"https://media.istockphoto.com/id/1024909814/pt/foto/close-up-of-tasty-hawaiian-pizza-with-ham-and-pineapple.jpg?s=612x612&w=0&k=20&c=62LDNZ28ungFXd_YRSSBkVWdtuUOqS1M6G-og7oA0Kg=",
+  "Banana":"https://media.istockphoto.com/id/1328370002/pt/foto/banana-pizza-with-sugar-and-cinnamon-on-wooden-board-brazilian-sweet-pizza.jpg?s=612x612&w=0&k=20&c=JhjrL5hSxmwukOAigrEqPG28tDc-sH0J7MLroPQxOV0=",
+  "Banana com Chocolate":"https://media.istockphoto.com/id/183022333/pt/foto/sobremesa-de-pizza.jpg?s=612x612&w=0&k=20&c=WGCnh2hKwlWToRgZuDHGvLG__Ddv65S3H7h7rKwhkAc=",
+  "Chocolate":"https://media.istockphoto.com/id/2197076618/pt/foto/chocolate-pizza.jpg?s=612x612&w=0&k=20&c=vjzrbWw0NX-Px52DsSpJIdoNftaUCzufLey7CtYaGpQ=",
+  "Prestígio":"https://media.istockphoto.com/id/1276352742/pt/foto/chocolate-pizza-and-grated-coconut.jpg?s=612x612&w=0&k=20&c=wvj0GaWF6gN2F1heN_5SLokhOcI6FTYMFPD-pyTw2Dc=",
+  "Romeu e Julieta":"https://media.istockphoto.com/id/1256219646/pt/foto/romeo-and-juliet-pizza-traditional-brazilian-sweet-pizza-with-sweet-guava-and-cheese.jpg?s=612x612&w=0&k=20&c=cKQx0ycAlowLgV6j4MLwGww3DWgmNvVMxKJ5n0u18TA=",
+  "Sensação":"https://media.istockphoto.com/id/510858582/pt/foto/pizza-de-chocolate.jpg?s=612x612&w=0&k=20&c=HYEaLbeFYVfBJP2diGM730YaUms7PkWHKOmjOxHC78s=",
+  "Beijinho":"https://media.istockphoto.com/id/1910499081/pt/foto/white-chocolate-pizza-with-coconut.jpg?s=612x612&w=0&k=20&c=Njh70qn62HnWGMGu7sWgVMo-vzQ47Dr62uB_BRhqkEc=",
+  "M&Ms":"https://media.istockphoto.com/id/1504179659/pt/foto/delicious-pizza.jpg?s=612x612&w=0&k=20&c=_X_CtIqpVO2_qvkHq7_g2Xv7VUBpRhemz60EmutOyLE=",
+  "Paçoca":"https://media.istockphoto.com/id/1256219712/pt/foto/sweet-pizza-chocolate-pizza-covered-with-chopped-chocolate-candy.jpg?s=612x612&w=0&k=20&c=1FFOKzHgDcQlWRwHI81MAu96fXrwfdiDsaE454TyOlg=",
+  "Brigadeiro":"https://media.istockphoto.com/id/964267588/pt/foto/pizza-de-chocolate.jpg?s=612x612&w=0&k=20&c=S0ZCD9IBEWUVvxif0IXAsWwXF7GV0ojrMZAlRkYixmU="
+};
+
+const salgadas=[
+["Americana Especial","Molho, mussarela, presunto, catupiry, orégano e azeitona","classica"],["A Grega","Molho, mussarela, calabresa, bacon, cheddar, orégano e azeitona","calabresa"],["A Moda do Pizzaiolo","Molho, mussarela, presunto, frango, bacon, catupiry, batata palha, orégano e azeitona","frango","Chef","gold"],["Atum","Molho, mussarela, atum, cebola, orégano e azeitona","atum"],["Atum Especial","Molho, mussarela, atum, catupiry, cebola, orégano e azeitona","atum"],["Bacon","Molho, mussarela, bacon, ovos, cebolas, orégano e azeitona","bacon"],["Baiana","Molho, mussarela, calabresa moída, ovos, pimenta, orégano e azeitona","calabresa","Picante",""],["Bauru","Molho, mussarela, presunto, tomate, orégano e azeitona","classica"],["Brócolis","Molho, mussarela, brócolis, bacon, orégano e azeitona","bacon"],["Caipira","Molho, mussarela, frango, milho, ovos, orégano e azeitona","frango"],["Calabresa","Molho, mussarela, calabresa, cebola, orégano e azeitona","calabresa","Mais Pedida",""],["Calabresa Especial","Molho, mussarela, calabresa, catupiry, cebola, orégano e azeitona","calabresa"],["Camarão","Molho, mussarela, camarão, ovos, catupiry, cebola, orégano e azeitona","premium","Premium","gold"],["Peperonni","Molho, mussarela, peperonni, orégano e azeitona","premium","Premium","gold"],["Carne Seca","Molho, mussarela, charque, ovos, catupiry, cebola, orégano e azeitona","premium","Premium","gold"],["Dois Queijos","Molho, mussarela, catupiry, orégano e azeitona","queijo"],["Frango Catupiry","Molho, mussarela, frango, catupiry, orégano e azeitona","frango","Favorita",""],["Frango com Mussarela","Molho, mussarela, frango, orégano e azeitona","frango"],["Lombo","Molho, mussarela, lombo, cebola, orégano e azeitona","classica"],["Lombo Especial","Molho, mussarela, lombo, catupiry, cebola, orégano e azeitona","classica"],["Marguerita","Molho, mussarela, manjericão, tomate, parmesão e azeitona","marguerita"],["Milho","Molho, mussarela, milho, orégano e azeitona","queijo"],["Mista","Molho, mussarela, presunto, calabresa, orégano e azeitona","calabresa"],["Mineira","Molho, mussarela, frango, bacon, orégano e azeitona","frango"],["Mussarela","Molho, mussarela, orégano e azeitona","queijo"],["Napolitana","Molho, mussarela, tomate, parmesão, orégano e azeitona","marguerita"],["Palmito","Molho, mussarela, palmito, cebola, orégano e azeitona","classica"],["Palheta","Molho, mussarela, frango, catupiry, batata palha, orégano e azeitona","frango"],["Paulista","Molho, mussarela, presunto, frango, milho, ervilha, palmito, orégano e azeitona","frango"],["Portuguesa","Molho, mussarela, presunto, milho, ervilha, ovos, cebola, orégano e azeitona","classica"],["Presunto","Molho, mussarela, presunto, orégano e azeitona","classica"],["Quatro Queijos","Molho, mussarela, gorgonzola, provolone, catupiry, tomate, orégano e azeitona","queijo"],["Século XXI","Molho, mussarela, frango, milho, bacon, catupiry, orégano e azeitona","frango"],["Toscana","Molho, mussarela, calabresa moída, cebola, orégano e azeitona","calabresa"],["Viena","Molho, mussarela, presunto, bacon, catupiry, tomate, orégano e azeitona","classica"],["Vegetariana","Molho, mussarela, palmito, milho, ervilha, ovos, tomate, cebola, orégano e azeitona","classica","Veggie","green"],["Veneza","Molho, mussarela, calabresa, milho, orégano e azeitona","calabresa"],["Você Decide","Recheio de quatro ingredientes à sua escolha","classica","Personalizada","green"],["Salame","Molho, mussarela, salame e um toque de limão, orégano e azeitona","premium","Premium","gold"],["Premium","Molho, calabresa, bacon, molho de alho, barbecue, cebola, tomate e azeitona","premium","Premium","gold"]];
+const doces=[["Abacaxi","Mussarela, abacaxi, mel e canela","doce"],["Banana","Mussarela, banana, leite condensado e canela","doce","Favorita",""],["Banana com Chocolate","Mussarela, banana e chocolate","chocolate"],["Chocolate","Mussarela, chocolate e cereja","chocolate"],["Prestígio","Mussarela, chocolate e coco ralado","chocolate"],["Romeu e Julieta","Mussarela, catupiry e goiabada","doce","Clássica",""],["Sensação","Mussarela, chocolate, ovomaltine e morango","chocolate","Premium","gold"],["Beijinho","Chocolate branco, coco ralado e leite condensado","doce"],["M&Ms","Chocolate com M&Ms","chocolate"],["Paçoca","Chocolate com amendoim","chocolate"],["Brigadeiro","Chocolate e granulado","chocolate"]];
+const drinks=[{cat:"Refrigerantes",ic:"fa-bottle-water",cor:"var(--red)",items:[["Fanta Laranja 2L",15],["Refrigerante Lata",6],["Refrigerante 1L",10],["Guaraná 2L",15],["Coca-Cola 2L",16],["Água Mineral",6]]},{cat:"Sucos Naturais",ic:"fa-blender",cor:"var(--green)",items:[["Suco Acerola",6],["Suco Abacaxi",6],["Suco Cajá",6],["Suco Caju",6],["Suco Graviola",6],["Suco Morango",6],["Suco Uva",6]]},{cat:"Cervejas",ic:"fa-beer-mug-empty",cor:"var(--gold)",items:[["Skol 300ml",5],["Brahma 300ml",5],["Bohemia 300ml",5],["Original 300ml",5],["Budweiser Long Neck",null]]},{cat:"Bebidas & Destilados",ic:"fa-wine-glass",cor:"#8b0000",items:[["Black White (dose)",8],["Cavalo Branco (dose)",10],["Red Label (dose)",12],["Black Label (dose)",16],["Smirnoff",8],["Vinho Morgado (taça)",8],["Vinho Morgado (garrafa)",20]]}];
+const sizes=[{key:"P",slices:"4 fatias",price:28},{key:"M",slices:"6 fatias",price:36},{key:"G",slices:"8 fatias",price:46},{key:"F",slices:"12 fatias",price:56}],bordas=["Sem borda","Catupiry","Cheddar","Chocolate"];
+
+const state={
+  cart:[],selectedPay:"",
+  receiveMode:"delivery", // "delivery" | "buscar" | "local"
+  addr:{rua:"",numero:"",bairro:"",ref:""},
+  obs:"",troco:"",trocoCustom:"",
+  modal:{name:"",img:"",size:"",price:0,borda:"Sem borda"}
+};
+
+const money=v=>"R$ "+Number(v).toFixed(2).replace(".",","),escapeHtml=v=>String(v).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])),qs=s=>document.querySelector(s);
+
+function renderPizzas(list,containerId,sweet=false){qs("#"+containerId).innerHTML=list.map(([name,desc,imgKey,tag,tagClass])=>{const image=pizzaImages[name]||"https://images.unsplash.com/photo-1513104890138-7c749659a591?w=600&q=80";return `<article class="pizza-card" data-pizza="${escapeHtml(name)}" data-img="${image}"><div class="pizza-img">${tag?`<span class="pizza-tag ${tagClass||""}">${escapeHtml(tag)}</span>`:""}<img src="${image}" alt="${escapeHtml(name)}" loading="lazy"></div><div class="pizza-body"><h3>${escapeHtml(name)}</h3><p>${escapeHtml(desc)}</p></div><div class="pizza-footer"><div class="pizza-price"><small>a partir de</small>R$ 28</div><button class="btn-size ${sweet?"doce":""}" type="button"><i class="fa-solid fa-expand"></i> Tamanhos</button></div></article>`}).join("")}
+function renderDrinks(){qs("#drinks-wrap").innerHTML=drinks.map(g=>`<section><div class="dcat-title"><i class="fa-solid ${g.ic}" style="color:${g.cor}"></i> ${escapeHtml(g.cat)}</div><div class="drinks-list">${g.items.map(([n,p])=>`<div class="drink-item"><span class="drink-name">${escapeHtml(n)}</span><div class="drink-right"><span class="drink-price">${p==null?"A consultar":money(p)}</span>${p==null?"":`<button class="btn-dadd" type="button" data-drink="${escapeHtml(n)}" data-price="${p}"><i class="fa-solid fa-plus"></i></button>`}</div></div>`).join("")}</div></section>`).join("")}
+function renderSizeOptions(){const lines=['<line x1="22" y1="2" x2="22" y2="42" stroke="#1B6B2E" stroke-width="2"/>','<line x1="2" y1="22" x2="42" y2="22" stroke="#1B6B2E" stroke-width="2"/>','<line x1="5.5" y1="5.5" x2="38.5" y2="38.5" stroke="#1B6B2E" stroke-width="2"/>','<line x1="38.5" y1="5.5" x2="5.5" y2="38.5" stroke="#1B6B2E" stroke-width="2"/>'];qs("#size-grid").innerHTML=sizes.map((s,i)=>`<button class="sopt" type="button" data-size="${s.key}" data-price="${s.price}"><svg viewBox="0 0 44 44" fill="none"><circle cx="22" cy="22" r="20" stroke="#1B6B2E" stroke-width="2.5"/>${lines.slice(0,i<1?2:4).join("")}${i===3?'<line x1="2" y1="12" x2="42" y2="32" stroke="#1B6B2E" stroke-width="1.5"/><line x1="2" y1="32" x2="42" y2="12" stroke="#1B6B2E" stroke-width="1.5"/>':""}</svg><span class="sopt-ltr">${s.key}</span><span class="sopt-sl">${s.slices}</span><span class="sopt-val">R$ ${s.price}</span></button>`).join("");qs("#borda-chips").innerHTML=bordas.map((n,i)=>`<button class="bchip ${i===0?"sel":""}" type="button" data-borda="${escapeHtml(n)}">${n==="Sem borda"?n:`${n} +R$5`}</button>`).join("")}
+
+function renderReceiveModeSelector(){
+  return `<div class="receive-block">
+    <div class="receive-hd"><i class="fa-solid fa-truck-fast" style="color:var(--charcoal)"></i> Como quer receber?</div>
+    <div class="receive-opts">
+      <button class="ropt delivery ${state.receiveMode==="delivery"?"sel delivery":""}" data-receive="delivery">
+        <i class="fa-solid fa-motorcycle"></i>
+        <span class="ropt-lbl">Delivery</span>
+        <span class="ropt-sub">Entrega em casa</span>
+      </button>
+      <button class="ropt buscar ${state.receiveMode==="buscar"?"sel buscar":""}" data-receive="buscar">
+        <i class="fa-solid fa-store"></i>
+        <span class="ropt-lbl">Buscar</span>
+        <span class="ropt-sub">Retirar no local</span>
+      </button>
+      <button class="ropt local ${state.receiveMode==="local"?"sel local":""}" data-receive="local">
+        <i class="fa-solid fa-utensils"></i>
+        <span class="ropt-lbl">No Local</span>
+        <span class="ropt-sub">Consumir aqui</span>
+      </button>
+    </div>
+  </div>`;
+}
+
+function renderAddressBlock(){
+  if(state.receiveMode==="buscar"){
+    return `<div class="info-chip gold"><i class="fa-solid fa-store"></i> Rua Aleixo Bezerra, 524 — Centro, Sumé. Venha buscar quando estiver pronto!</div>`;
+  }
+  if(state.receiveMode==="local"){
+    return `<div class="info-chip red"><i class="fa-solid fa-utensils"></i> Você vai consumir no local. Informe seu nome ou mesa nas observações, se quiser.</div>`;
+  }
+  // delivery
+  return `<div class="addr-block">
+    <div class="addr-hd"><i class="fa-solid fa-location-dot"></i> Endereço de entrega</div>
+    <div class="addr-g2">
+      <label><span class="fl-lbl">Rua / Av. <span class="req">*</span></span><input class="fl-inp" data-addr="rua" type="text" placeholder="Ex: Rua das Flores" value="${escapeHtml(state.addr.rua)}"></label>
+      <label><span class="fl-lbl">Nº <span class="req">*</span></span><input class="fl-inp" data-addr="numero" type="text" placeholder="42" value="${escapeHtml(state.addr.numero)}"></label>
+    </div>
+    <label><span class="fl-lbl">Bairro <span class="req">*</span></span><input class="fl-inp" data-addr="bairro" type="text" placeholder="Ex: Centro" value="${escapeHtml(state.addr.bairro)}"></label>
+    <label style="display:block;margin-top:7px"><span class="fl-lbl">Referência</span><input class="fl-inp" data-addr="ref" type="text" placeholder="Próximo ao mercado" value="${escapeHtml(state.addr.ref)}"></label>
+  </div>`;
+}
+
+function isAddrOk(){
+  if(state.receiveMode==="buscar"||state.receiveMode==="local") return true;
+  return Boolean(state.addr.rua&&state.addr.numero&&state.addr.bairro);
+}
+
+function openSzModal(name,img){state.modal={name,img,size:"",price:0,borda:"Sem borda"};qs("#sz-pname").textContent=name;document.querySelectorAll(".sopt").forEach(i=>i.classList.remove("sel"));document.querySelectorAll(".bchip").forEach(i=>i.classList.toggle("sel",i.dataset.borda==="Sem borda"));updateSizePreview();qs("#sz-overlay").classList.add("open");document.body.classList.add("lock")}
+function closeSzModal(){qs("#sz-overlay").classList.remove("open");document.body.classList.remove("lock")}
+function updateSizePreview(){const extra=state.modal.borda==="Sem borda"?0:5,btn=qs("#btn-add-sz");if(!state.modal.size){qs("#sz-prev").textContent="Selecione um tamanho acima";btn.disabled=true;return}qs("#sz-prev").innerHTML=`Pizza <strong>${state.modal.size}</strong>${extra?` + Borda ${escapeHtml(state.modal.borda)}`:""} = <strong>${money(state.modal.price+extra)}</strong>`;btn.disabled=false}
+function confirmSz(){if(!state.modal.size)return;const extra=state.modal.borda==="Sem borda"?0:5,bordaText=extra?` (Borda ${state.modal.borda})`:"";addDirect(`${state.modal.name} - ${state.modal.size}${bordaText}`,state.modal.img,state.modal.price+extra);closeSzModal()}
+function addDirect(name,img,price){const cur=state.cart.find(i=>i.name===name);if(cur)cur.qty++;else state.cart.push({name,img,price:Number(price),qty:1});updateCartBadges();showToast("+ "+name.split(" - ")[0])}
+function removeItem(name){state.cart=state.cart.filter(i=>i.name!==name);updateCartBadges();renderCart()}
+function changeQty(name,delta){const item=state.cart.find(i=>i.name===name);if(!item)return;item.qty+=delta;if(item.qty<=0)removeItem(name);else{updateCartBadges();renderCart()}}
+function getTotal(){return state.cart.reduce((s,i)=>s+i.price*i.qty,0)}
+function getQty(){return state.cart.reduce((s,i)=>s+i.qty,0)}
+function updateCartBadges(){const q=getQty();qs("#nav-cart-count").textContent=q;qs("#tab-cart-count").textContent=q;if(qs("#tab-cart").classList.contains("active"))renderCart()}
+
+function renderCart(){
+  const c=qs("#cart-content");
+  if(!state.cart.length){
+    c.innerHTML=`<div class="cart-empty"><i class="fa-solid fa-cart-shopping"></i><p>Carrinho vazio. Adicione pizzas!</p><button class="btn-size" onclick="showTab('salgadas')"><i class="fa-solid fa-pizza-slice"></i> Ver Cardápio</button></div>`;
+    return;
+  }
+  const items=state.cart.map(i=>`<div class="cart-item"><div class="citem-img">${i.img?`<img src="${i.img}" alt="${escapeHtml(i.name)}">`:`<div style="width:64px;height:64px;background:var(--red);display:grid;place-items:center;color:#fff;font-size:1.8rem">🍕</div>`}</div><div class="citem-info"><strong>${escapeHtml(i.name)}</strong><span>${money(i.price)} un.</span><div class="qty-ctrl"><button class="qty-btn" data-qty-name="${escapeHtml(i.name)}" data-delta="-1">−</button><span class="qty-num">${i.qty}</span><button class="qty-btn" data-qty-name="${escapeHtml(i.name)}" data-delta="1">+</button><button class="qty-btn" data-remove-name="${escapeHtml(i.name)}"><i class="fa-solid fa-trash" style="font-size:.58rem"></i></button></div></div><div class="citem-price">${money(i.price*i.qty)}</div></div>`).join("");
+
+  const payOptions=[["dinheiro","fa-solid fa-money-bill-wave","Dinheiro"],["pix","fa-brands fa-pix","Pix"],["debito","fa-solid fa-credit-card","Débito"],["credito","fa-regular fa-credit-card","Crédito"]].map(([id,icon,label])=>`<button class="popt ${state.selectedPay===id?"sel":""}" data-pay="${id}"><i class="${icon}"></i><span>${label}</span></button>`).join("");
+
+  const ok=Boolean(state.selectedPay&&isAddrOk());
+
+  const deliveryRow=state.receiveMode==="delivery"?`<div class="sum-row"><span>Entrega</span><span style="font-style:italic">A combinar</span></div>`:"";
+
+  c.innerHTML=`<div class="cart-layout">
+    <div>
+      <div class="cart-col-title"><i class="fa-solid fa-receipt" style="color:var(--red);font-size:1.3rem"></i> Seu Pedido <span class="qty-pill">${getQty()}</span></div>
+      ${items}
+      <button class="qty-btn" style="width:auto;padding:0 12px" onclick="clearCart()">Limpar</button>
+    </div>
+    <div class="pay-box">
+      <div class="pay-hd"><i class="fa-solid fa-lock"></i><h4>Pagamento</h4></div>
+      <div class="pay-bd">
+        <div class="sum-row"><span>Subtotal</span><span>${money(getTotal())}</span></div>
+        ${deliveryRow}
+        <div class="sum-row total"><span>Total</span><span class="val">${money(getTotal())}</span></div>
+        ${renderReceiveModeSelector()}
+        ${renderAddressBlock()}
+        <span class="pay-lbl">Forma de pagamento</span>
+        <div class="pay-methods">${payOptions}</div>
+        ${state.selectedPay==="dinheiro"?renderTroco():""}
+        <label><span class="obs-lbl">Observações (opcional)</span><textarea id="obs-inp" class="obs-inp fl-inp" rows="2" placeholder="Ex: sem cebola, cream cheese extra...">${escapeHtml(state.obs)}</textarea></label>
+        <button class="btn-confirm" id="btn-confirm" ${ok?"":"disabled"} onclick="confirmPedido()"><i class="fa-brands fa-whatsapp" style="font-size:1.15rem"></i> Confirmar Pedido</button>
+        <p class="pay-hint" id="pay-hint"><i class="fa-solid fa-circle-info"></i> ${ok?"Pedido será enviado via WhatsApp":state.selectedPay?"Preencha o endereço":"Escolha a forma de pagamento"}</p>
+      </div>
+    </div>
+  </div>`;
+}
+
+function renderTroco(){const chips=[["nao","Não preciso"],["50","R$ 50"],["100","R$ 100"],["outro","Outro"]];return `<div class="troco-block"><div class="troco-lbl"><i class="fa-solid fa-coins"></i> Precisa de troco?</div><div class="troco-chips">${chips.map(([id,label])=>`<button class="tchip ${state.troco===id?"sel":""}" data-troco="${id}">${label}</button>`).join("")}</div>${state.troco==="outro"?`<div style="display:flex;align-items:center;gap:7px;margin-top:9px"><strong>R$</strong><input class="fl-inp" id="troco-custom" type="number" inputmode="decimal" placeholder="Valor" value="${escapeHtml(state.trocoCustom)}"></div>`:""}</div>`}
+function clearCart(){state.cart=[];updateCartBadges();renderCart()}
+
+function syncConfirmButton(){
+  const b=qs("#btn-confirm"),h=qs("#pay-hint");
+  if(!b||!h)return;
+  const ok=Boolean(state.selectedPay&&isAddrOk());
+  b.disabled=!ok;
+  h.innerHTML=`<i class="fa-solid fa-circle-info"></i> ${ok?"Pedido será enviado via WhatsApp":state.selectedPay?"Preencha o endereço":"Escolha a forma de pagamento"}`;
+}
+
+function confirmPedido(){
+  state.obs=qs("#obs-inp")?.value||state.obs;
+  if(!state.selectedPay||!state.cart.length||!isAddrOk())return;
+  if(state.selectedPay==="pix"){openPixModal();return}
+  sendWA();
+}
+
+function sendWA(){
+  state.obs=qs("#obs-inp")?.value||state.obs;
+  const payLabel={dinheiro:"Dinheiro",pix:"Pix",debito:"Cartão Débito",credito:"Cartão Crédito"}[state.selectedPay]||state.selectedPay;
+  const modeLabel={delivery:"🛵 Delivery",buscar:"🏪 Retirada no local",local:"🍽️ Consumo no local"}[state.receiveMode];
+  let msg="🍕 *PEDIDO - Pizzaria do Gordo*\n\n*Itens:*\n";
+  state.cart.forEach(i=>{msg+=`• ${i.qty}x ${i.name} - ${money(i.price*i.qty)}\n`});
+  msg+=`\n*Total:* ${money(getTotal())}`;
+  if(state.receiveMode==="delivery")msg+=`\n*Entrega:* A combinar`;
+  msg+=`\n*Modalidade:* ${modeLabel}`;
+  msg+=`\n*Pagamento:* ${payLabel}`;
+  if(state.selectedPay==="dinheiro"){
+    if(state.troco==="nao")msg+="\n*Troco:* Não precisa";
+    if(state.troco==="50")msg+="\n*Troco:* Para R$ 50,00";
+    if(state.troco==="100")msg+="\n*Troco:* Para R$ 100,00";
+    if(state.troco==="outro"&&state.trocoCustom)msg+=`\n*Troco:* Para ${money(state.trocoCustom)}`;
+  }
+  if(state.receiveMode==="delivery"){
+    let endereco=`${state.addr.rua}, ${state.addr.numero} - ${state.addr.bairro}, Sumé - PB`;
+    if(state.addr.ref.trim())endereco+=` (Ref: ${state.addr.ref.trim()})`;
+    msg+=`\n*Endereço:* ${endereco}`;
+  }
+  if(state.obs.trim())msg+=`\n*Obs:* ${state.obs.trim()}`;
+  window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`,"_blank","noopener");
+}
+
+function showTab(id){document.querySelectorAll(".tab-panel").forEach(p=>p.classList.remove("active"));document.querySelectorAll(".tab-btn").forEach(b=>b.classList.toggle("active",b.dataset.tab===id));qs("#tab-"+id)?.classList.add("active");if(id==="cart")renderCart()}
+function openCart(){showTab("cart");qs("#cardapio").scrollIntoView({behavior:"smooth"})}
+function openPixModal(){qs("#pix-ov").classList.add("open");document.body.classList.add("lock")}
+function closePixModal(){qs("#pix-ov").classList.remove("open");document.body.classList.remove("lock")}
+async function copyPix(){try{await navigator.clipboard.writeText(PIX_KEY)}catch(e){const t=document.createElement("textarea");t.value=PIX_KEY;t.style.cssText="position:fixed;opacity:0";document.body.appendChild(t);t.select();document.execCommand("copy");t.remove()}const b=qs("#pix-copy-btn");b.classList.add("done");b.innerHTML='<i class="fa-solid fa-check"></i> Copiado!';setTimeout(()=>{b.classList.remove("done");b.innerHTML='<i class="fa-regular fa-copy"></i> Copiar'},2500)}
+let toastTimer;function showToast(m){qs("#toast-msg").textContent=m;qs("#toast").classList.add("show");clearTimeout(toastTimer);toastTimer=setTimeout(()=>qs("#toast").classList.remove("show"),2400)}
+
+function init(){
+  renderPizzas(salgadas,"salgadas-grid");
+  renderPizzas(doces,"doces-grid",true);
+  renderDrinks();
+  renderSizeOptions();
+  document.addEventListener("click",e=>{
+    const pizzaCard=e.target.closest(".pizza-card");
+    if(pizzaCard){openSzModal(pizzaCard.dataset.pizza,pizzaCard.dataset.img);return}
+    const tabButton=e.target.closest("[data-tab]");
+    if(tabButton){showTab(tabButton.dataset.tab);return}
+    const drinkButton=e.target.closest("[data-drink]");
+    if(drinkButton){addDirect(drinkButton.dataset.drink,"",drinkButton.dataset.price);return}
+    const sizeButton=e.target.closest("[data-size]");
+    if(sizeButton){document.querySelectorAll(".sopt").forEach(i=>i.classList.remove("sel"));sizeButton.classList.add("sel");state.modal.size=sizeButton.dataset.size;state.modal.price=Number(sizeButton.dataset.price);updateSizePreview();return}
+    const bordaButton=e.target.closest("[data-borda]");
+    if(bordaButton){document.querySelectorAll(".bchip").forEach(i=>i.classList.remove("sel"));bordaButton.classList.add("sel");state.modal.borda=bordaButton.dataset.borda;updateSizePreview();return}
+    const qtyButton=e.target.closest("[data-qty-name]");
+    if(qtyButton){changeQty(qtyButton.dataset.qtyName,Number(qtyButton.dataset.delta));return}
+    const removeButton=e.target.closest("[data-remove-name]");
+    if(removeButton){removeItem(removeButton.dataset.removeName);return}
+    const payButton=e.target.closest("[data-pay]");
+    if(payButton){state.obs=qs("#obs-inp")?.value||state.obs;state.selectedPay=payButton.dataset.pay;if(state.selectedPay!=="dinheiro"){state.troco="";state.trocoCustom=""}renderCart();return}
+    const trocoButton=e.target.closest("[data-troco]");
+    if(trocoButton){state.troco=trocoButton.dataset.troco;if(state.troco!=="outro")state.trocoCustom="";state.obs=qs("#obs-inp")?.value||state.obs;renderCart();return}
+    const footerTab=e.target.closest("[data-footer-tab]");
+    if(footerTab)showTab(footerTab.dataset.footerTab);
+    // MODO DE RECEBIMENTO
+    const receiveBtn=e.target.closest("[data-receive]");
+    if(receiveBtn){state.obs=qs("#obs-inp")?.value||state.obs;state.receiveMode=receiveBtn.dataset.receive;renderCart();return}
+  });
+  document.addEventListener("input",e=>{
+    if(e.target.matches("[data-addr]")){state.addr[e.target.dataset.addr]=e.target.value;syncConfirmButton()}
+    if(e.target.id==="obs-inp")state.obs=e.target.value;
+    if(e.target.id==="troco-custom")state.trocoCustom=e.target.value;
+  });
+  qs("#sz-overlay").addEventListener("click",e=>{if(e.target.id==="sz-overlay")closeSzModal()});
+  qs("#pix-ov").addEventListener("click",e=>{if(e.target.id==="pix-ov")closePixModal()});
+  window.addEventListener("keydown",e=>{if(e.key==="Escape"){closeSzModal();closePixModal()}});
+  window.addEventListener("scroll",()=>{qs("#header").style.boxShadow=scrollY>50?"0 4px 22px rgba(0,0,0,.14)":"0 2px 18px rgba(0,0,0,.1)"});
+}
+document.addEventListener("DOMContentLoaded",init);
+</script>
 </body>
 </html>
